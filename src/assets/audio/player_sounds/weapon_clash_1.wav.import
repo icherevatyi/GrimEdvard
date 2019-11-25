@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/weapon_clash_1.wav-95ac3caa6091f0445448046a5d1fbf4d.sample"
+
+[deps]
+
+source_file="res://src/assets/audio/player_sounds/weapon_clash_1.wav"
+dest_files=[ "res://.import/weapon_clash_1.wav-95ac3caa6091f0445448046a5d1fbf4d.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

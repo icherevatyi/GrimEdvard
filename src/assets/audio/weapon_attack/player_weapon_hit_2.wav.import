@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/player_weapon_hit_2.wav-0ac35f43cd35d5e5d6ec028160d8c6d1.sample"
+
+[deps]
+
+source_file="res://src/assets/audio/weapon_attack/player_weapon_hit_2.wav"
+dest_files=[ "res://.import/player_weapon_hit_2.wav-0ac35f43cd35d5e5d6ec028160d8c6d1.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

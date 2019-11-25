@@ -1,0 +1,135 @@
+[gd_scene load_steps=13 format=2]
+
+[ext_resource path="res://src/components/Player/Player.gd" type="Script" id=1]
+[ext_resource path="res://src/components/Player/PlayerStateMachine.gd" type="Script" id=2]
+[ext_resource path="res://src/assets/img/Player/Edvard_animation_sheet.png" type="Texture" id=3]
+[ext_resource path="res://src/components/Player/Helpers/HUD.tscn" type="PackedScene" id=4]
+[ext_resource path="res://src/components/Player/Helpers/Camera.tscn" type="PackedScene" id=5]
+
+[sub_resource type="AtlasTexture" id=1]
+atlas = ExtResource( 3 )
+region = Rect2( 0, 0, 300, 23 )
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 6, 11 )
+
+[sub_resource type="Animation" id=3]
+resource_name = "climb"
+length = 0.4
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ 13, 14 ]
+}
+
+[sub_resource type="Animation" id=4]
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 12 ]
+}
+
+[sub_resource type="Animation" id=5]
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 0 ]
+}
+
+[sub_resource type="Animation" id=6]
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 11 ]
+}
+
+[sub_resource type="Animation" id=7]
+length = 0.4
+loop = true
+step = 0.04
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.04, 0.08, 0.12, 0.16, 0.2, 0.24, 0.28, 0.32, 0.36 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 ]
+}
+
+[node name="Player" type="KinematicBody2D"]
+scale = Vector2( 1.00508, 1.00473 )
+collision_mask = 15
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="PlayerStateMachine" type="Node2D" parent="."]
+script = ExtResource( 2 )
+
+[node name="Sprite" type="Sprite" parent="." groups=[
+"turnable",
+]]
+texture = SubResource( 1 )
+hframes = 15
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource( 2 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/climb = SubResource( 3 )
+anims/fall = SubResource( 4 )
+anims/idle = SubResource( 5 )
+anims/jump = SubResource( 6 )
+anims/run = SubResource( 7 )
+
+[node name="HUD" parent="." instance=ExtResource( 4 )]
+
+[node name="Camera" parent="." instance=ExtResource( 5 )]
+position = Vector2( 0, -30 )
+zoom = Vector2( 0.5, 0.5 )
+editor_draw_limits = true
+
+[node name="ActionChecker" type="RayCast2D" parent="."]
+position = Vector2( -5.96967, 0 )
+enabled = true
+cast_to = Vector2( 12, 0 )
+collide_with_areas = true
+collide_with_bodies = false
+
+[connection signal="grounded_updated" from="." to="Camera" method="_on_Player_grounded_updated"]

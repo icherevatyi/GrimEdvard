@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/spooky_cellar_ambience.wav-4c27ab7c92e2408ffc8565703cada6d0.sample"
+
+[deps]
+
+source_file="res://src/assets/audio/gackground_sounds/spooky_cellar_ambience.wav"
+dest_files=[ "res://.import/spooky_cellar_ambience.wav-4c27ab7c92e2408ffc8565703cada6d0.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

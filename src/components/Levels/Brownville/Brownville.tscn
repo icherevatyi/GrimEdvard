@@ -1,0 +1,844 @@
+[gd_scene load_steps=68 format=2]
+
+[ext_resource path="res://src/components/Levels/Brownville/Brownville.gd" type="Script" id=1]
+[ext_resource path="res://src/assets/img/Background/NightForest/night_sky.png" type="Texture" id=2]
+[ext_resource path="res://src/assets/img/Background/NightForest/forest_bg.png" type="Texture" id=3]
+[ext_resource path="res://src/assets/img/Background/NightForest/grass_far.png" type="Texture" id=4]
+[ext_resource path="res://src/assets/img/Background/NightForest/grass_far_end.png" type="Texture" id=5]
+[ext_resource path="res://src/assets/img/Background/Brownville/back_street.png" type="Texture" id=6]
+[ext_resource path="res://src/assets/img/GroundElements/buildings.png" type="Texture" id=7]
+[ext_resource path="res://src/assets/img/Background/Brownville/smoke_item.png" type="Texture" id=8]
+[ext_resource path="res://src/assets/img/Light/Brownville_light_night.png" type="Texture" id=9]
+[ext_resource path="res://src/assets/img/GroundElements/ForestRoadElements.png" type="Texture" id=10]
+[ext_resource path="res://src/components/Levels/Brownville/Tiles/Grass.tres" type="TileSet" id=11]
+[ext_resource path="res://src/components/Levels/Brownville/Tiles/Street.tres" type="TileSet" id=12]
+[ext_resource path="res://src/assets/img/GroundElements/Forest_lvl/forest_river.png" type="Texture" id=13]
+[ext_resource path="res://src/assets/img/GroundElements/bridge.png" type="Texture" id=14]
+
+[sub_resource type="Gradient" id=1]
+colors = PoolColorArray( 0.300781, 1, 0.91806, 1, 1, 1, 1, 1 )
+
+[sub_resource type="GradientTexture" id=2]
+gradient = SubResource( 1 )
+
+[sub_resource type="Curve" id=3]
+_data = [ Vector2( 0, 0.2382 ), 0.0, -0.276182, 0, 0, Vector2( 1, 1 ), 0.0, 0.0, 0, 0 ]
+
+[sub_resource type="CurveTexture" id=4]
+curve = SubResource( 3 )
+
+[sub_resource type="ParticlesMaterial" id=5]
+emission_shape = 2
+emission_box_extents = Vector3( 640, 360, 1 )
+flag_disable_z = true
+spread = 61.36
+gravity = Vector3( 0, 0, 0 )
+angular_velocity = 112.0
+orbit_velocity = 0.0
+orbit_velocity_random = 0.0
+scale = 3.0
+scale_curve = SubResource( 4 )
+color_ramp = SubResource( 2 )
+
+[sub_resource type="Gradient" id=6]
+colors = PoolColorArray( 0.78125, 0.38147, 0.38147, 1, 0.75602, 0.90625, 0.219482, 1 )
+
+[sub_resource type="GradientTexture" id=7]
+gradient = SubResource( 6 )
+
+[sub_resource type="Curve" id=8]
+_data = [ Vector2( 0, 0.2778 ), 0.0, 0.0, 0, 0, Vector2( 1, 1 ), 0.0, 0.0, 0, 0 ]
+
+[sub_resource type="CurveTexture" id=9]
+curve = SubResource( 8 )
+
+[sub_resource type="ParticlesMaterial" id=10]
+emission_shape = 2
+emission_box_extents = Vector3( 640, 360, 1 )
+flag_disable_z = true
+gravity = Vector3( 0, 0, 0 )
+angular_velocity = 9.12132
+orbit_velocity = 0.0
+orbit_velocity_random = 0.0
+scale = 4.0
+scale_random = 1.0
+scale_curve = SubResource( 9 )
+color_ramp = SubResource( 7 )
+
+[sub_resource type="AtlasTexture" id=11]
+atlas = ExtResource( 2 )
+region = Rect2( 0, 74, 74, 74 )
+
+[sub_resource type="AtlasTexture" id=12]
+atlas = ExtResource( 2 )
+region = Rect2( 0, 0, 250, 56 )
+
+[sub_resource type="AtlasTexture" id=13]
+atlas = ExtResource( 2 )
+region = Rect2( 251, 0, 211, 35 )
+
+[sub_resource type="AtlasTexture" id=14]
+atlas = ExtResource( 2 )
+region = Rect2( 224, 52, 112, 17 )
+
+[sub_resource type="AtlasTexture" id=15]
+atlas = ExtResource( 2 )
+region = Rect2( 0, 57, 69, 15 )
+
+[sub_resource type="AtlasTexture" id=16]
+atlas = ExtResource( 2 )
+region = Rect2( 70, 60, 50, 7 )
+
+[sub_resource type="AtlasTexture" id=17]
+atlas = ExtResource( 2 )
+region = Rect2( 176, 58, 47, 6 )
+
+[sub_resource type="AtlasTexture" id=18]
+atlas = ExtResource( 2 )
+region = Rect2( 337, 47, 66, 19 )
+
+[sub_resource type="AtlasTexture" id=19]
+atlas = ExtResource( 2 )
+region = Rect2( 405, 54, 53, 9 )
+
+[sub_resource type="Gradient" id=20]
+offsets = PoolRealArray( 0, 0.427152, 0.728477, 0.781457 )
+colors = PoolColorArray( 0, 0, 0, 1, 0.0696564, 0.0889391, 0.214844, 1, 0.037262, 0.289063, 0.259555, 1, 0.0151062, 0.0234375, 0.0203132, 1 )
+
+[sub_resource type="GradientTexture" id=21]
+gradient = SubResource( 20 )
+
+[sub_resource type="AtlasTexture" id=22]
+atlas = ExtResource( 7 )
+region = Rect2( 11, 164, 60, 26 )
+
+[sub_resource type="AtlasTexture" id=23]
+atlas = ExtResource( 7 )
+region = Rect2( 47, 191, 25, 20 )
+
+[sub_resource type="AtlasTexture" id=24]
+atlas = ExtResource( 7 )
+region = Rect2( 2, 195, 13, 16 )
+
+[sub_resource type="AtlasTexture" id=25]
+atlas = ExtResource( 7 )
+region = Rect2( 0, 62, 130, 99 )
+
+[sub_resource type="AtlasTexture" id=26]
+atlas = ExtResource( 7 )
+region = Rect2( 75, 192, 23, 19 )
+
+[sub_resource type="AtlasTexture" id=27]
+atlas = ExtResource( 7 )
+region = Rect2( 131, 50, 140, 111 )
+
+[sub_resource type="AtlasTexture" id=28]
+atlas = ExtResource( 7 )
+region = Rect2( 18, 191, 26, 20 )
+
+[sub_resource type="Gradient" id=29]
+colors = PoolColorArray( 0.618652, 0.618652, 0.618652, 0.894118, 1, 1, 1, 0.286275 )
+
+[sub_resource type="GradientTexture" id=30]
+gradient = SubResource( 29 )
+
+[sub_resource type="Curve" id=31]
+max_value = 4.0
+_data = [ Vector2( 0.117442, 0.2752 ), 0.0, 2.57634, 0, 0, Vector2( 1, 0 ), 0.0, 0.0, 0, 0 ]
+
+[sub_resource type="CurveTexture" id=32]
+curve = SubResource( 31 )
+
+[sub_resource type="Curve" id=33]
+_data = [ Vector2( 0, 0.1238 ), 0.0, 0.0, 0, 0, Vector2( 1, 1 ), 0.0, 0.0, 0, 0 ]
+
+[sub_resource type="CurveTexture" id=34]
+curve = SubResource( 33 )
+
+[sub_resource type="ParticlesMaterial" id=35]
+trail_size_modifier = SubResource( 34 )
+flag_disable_z = true
+gravity = Vector3( 0, 0, 0 )
+initial_velocity = 50.0
+angular_velocity = 144.0
+orbit_velocity = 0.0
+orbit_velocity_random = 0.0
+radial_accel = 15.0
+scale = 5.0
+scale_curve = SubResource( 32 )
+color_ramp = SubResource( 30 )
+
+[sub_resource type="AtlasTexture" id=36]
+atlas = ExtResource( 7 )
+region = Rect2( 450, 0, 361, 161 )
+
+[sub_resource type="AtlasTexture" id=37]
+atlas = ExtResource( 7 )
+region = Rect2( 272, 69, 177, 92 )
+
+[sub_resource type="AtlasTexture" id=38]
+atlas = ExtResource( 7 )
+region = Rect2( 31, 212, 38, 21 )
+
+[sub_resource type="AtlasTexture" id=39]
+atlas = ExtResource( 7 )
+region = Rect2( 99, 166, 29, 65 )
+
+[sub_resource type="AtlasTexture" id=40]
+atlas = ExtResource( 7 )
+region = Rect2( 164, 166, 39, 65 )
+
+[sub_resource type="AtlasTexture" id=41]
+atlas = ExtResource( 7 )
+region = Rect2( 208, 164, 28, 60 )
+
+[sub_resource type="AtlasTexture" id=42]
+atlas = ExtResource( 7 )
+region = Rect2( 130, 166, 29, 66 )
+
+[sub_resource type="AtlasTexture" id=43]
+atlas = ExtResource( 10 )
+region = Rect2( 0, 2, 25, 14 )
+
+[sub_resource type="AtlasTexture" id=44]
+atlas = ExtResource( 10 )
+region = Rect2( 29, 2, 25, 14 )
+
+[sub_resource type="AtlasTexture" id=45]
+atlas = ExtResource( 10 )
+region = Rect2( 58, 2, 24, 14 )
+
+[sub_resource type="AtlasTexture" id=46]
+atlas = ExtResource( 10 )
+region = Rect2( 85, 3, 19, 15 )
+
+[sub_resource type="AtlasTexture" id=47]
+atlas = ExtResource( 10 )
+region = Rect2( 165, 2, 24, 14 )
+
+[sub_resource type="AtlasTexture" id=48]
+atlas = ExtResource( 10 )
+region = Rect2( 193, 0, 43, 16 )
+
+[sub_resource type="RectangleShape2D" id=49]
+extents = Vector2( 22, 8 )
+
+[sub_resource type="AtlasTexture" id=50]
+atlas = ExtResource( 10 )
+region = Rect2( 0, 18, 20, 14 )
+
+[sub_resource type="RectangleShape2D" id=51]
+extents = Vector2( 10, 7 )
+
+[sub_resource type="RectangleShape2D" id=52]
+extents = Vector2( 171.064, 18.993 )
+
+[sub_resource type="RectangleShape2D" id=53]
+extents = Vector2( 10, 50 )
+
+[node name="World" type="Node2D"]
+script = ExtResource( 1 )
+
+[node name="Background" type="Node2D" parent="."]
+editor/display_folded = true
+
+[node name="Clouds" type="ParallaxBackground" parent="Background"]
+offset = Vector2( 0, 70 )
+scale = Vector2( 0.6, 0.6 )
+transform = Transform2D( 0.6, 0, 0, 0.6, 0, 70 )
+
+[node name="Stars" type="Node2D" parent="Background/Clouds"]
+position = Vector2( 640, 0 )
+
+[node name="Particles2D" type="Particles2D" parent="Background/Clouds/Stars"]
+amount = 160
+lifetime = 50.0
+preprocess = 40.0
+process_material = SubResource( 5 )
+
+[node name="Particles2D2" type="Particles2D" parent="Background/Clouds/Stars"]
+amount = 160
+lifetime = 80.0
+preprocess = 70.0
+process_material = SubResource( 10 )
+
+[node name="Moon" type="Sprite" parent="Background/Clouds"]
+modulate = Color( 0.886275, 0.890196, 0.890196, 1 )
+position = Vector2( 785.667, 0.373291 )
+z_index = -2
+z_as_relative = false
+texture = SubResource( 11 )
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="Background/Clouds"]
+editor/display_folded = true
+modulate = Color( 0.156863, 0.0745098, 0.235294, 1 )
+position = Vector2( 0, -13.3333 )
+motion_scale = Vector2( 0.2, 1 )
+motion_mirroring = Vector2( 1200, 0 )
+
+[node name="Sprite" type="Sprite" parent="Background/Clouds/ParallaxLayer"]
+position = Vector2( 244.334, 131.066 )
+texture = SubResource( 12 )
+
+[node name="Sprite2" type="Sprite" parent="Background/Clouds/ParallaxLayer"]
+position = Vector2( 551.167, 131.733 )
+texture = SubResource( 13 )
+
+[node name="Sprite3" type="Sprite" parent="Background/Clouds/ParallaxLayer"]
+position = Vector2( 756.667, 118.833 )
+texture = SubResource( 14 )
+
+[node name="Sprite4" type="Sprite" parent="Background/Clouds/ParallaxLayer"]
+position = Vector2( 411.833, 112.567 )
+texture = SubResource( 15 )
+
+[node name="Sprite5" type="Sprite" parent="Background/Clouds/ParallaxLayer"]
+position = Vector2( 891.834, 100.833 )
+texture = SubResource( 16 )
+
+[node name="Sprite6" type="Sprite" parent="Background/Clouds/ParallaxLayer"]
+position = Vector2( 977.167, 110.333 )
+texture = SubResource( 17 )
+
+[node name="Sprite7" type="Sprite" parent="Background/Clouds/ParallaxLayer"]
+position = Vector2( 898.168, 137 )
+texture = SubResource( 18 )
+
+[node name="Sprite8" type="Sprite" parent="Background/Clouds/ParallaxLayer"]
+position = Vector2( 1148.67, 112.567 )
+texture = SubResource( 19 )
+
+[node name="Forest" type="ParallaxBackground" parent="Background"]
+editor/display_folded = true
+
+[node name="Trees" type="ParallaxLayer" parent="Background/Forest"]
+position = Vector2( 358, 192 )
+motion_scale = Vector2( 0.6, 1 )
+motion_mirroring = Vector2( 561, 0 )
+
+[node name="Sprite" type="Sprite" parent="Background/Forest/Trees"]
+position = Vector2( 282, 0 )
+texture = ExtResource( 3 )
+region_enabled = true
+region_rect = Rect2( 0, 0, 561, 83 )
+
+[node name="Grass" type="Sprite" parent="Background"]
+position = Vector2( 492, 228 )
+scale = Vector2( 0.901818, 1 )
+texture = ExtResource( 4 )
+region_enabled = true
+region_rect = Rect2( 0, 0, 1100, 29 )
+
+[node name="Grass_end" type="Sprite" parent="Background"]
+position = Vector2( 995, 231 )
+texture = ExtResource( 5 )
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+layer = -2
+
+[node name="Sprite" type="Sprite" parent="CanvasLayer"]
+position = Vector2( 1312, -2.47383e-010 )
+rotation = 1.57079
+scale = Vector2( 0.149443, 1330.56 )
+texture = SubResource( 21 )
+centered = false
+
+[node name="Buidings" type="Node2D" parent="."]
+editor/display_folded = true
+position = Vector2( 1644, 35 )
+scale = Vector2( 0.7, 0.7 )
+
+[node name="Back_Street" type="Sprite" parent="Buidings"]
+position = Vector2( 725.143, 276 )
+texture = ExtResource( 6 )
+region_enabled = true
+region_rect = Rect2( 0, 0, 384, 48 )
+
+[node name="Back_fence" type="Sprite" parent="Buidings"]
+position = Vector2( 17.7144, 263.429 )
+texture = SubResource( 22 )
+
+[node name="Back_fence8" type="Sprite" parent="Buidings"]
+position = Vector2( -42.2854, 263.429 )
+texture = SubResource( 22 )
+
+[node name="Back_fence2" type="Sprite" parent="Buidings"]
+position = Vector2( 177, 263.429 )
+texture = SubResource( 22 )
+
+[node name="Back_fence7" type="Sprite" parent="Buidings"]
+position = Vector2( 345.571, 263.429 )
+texture = SubResource( 22 )
+
+[node name="Back_fence5" type="Sprite" parent="Buidings"]
+position = Vector2( 556.395, 243.132 )
+texture = SubResource( 22 )
+offset = Vector2( -24.6475, 0.584656 )
+
+[node name="Back_fence6" type="Sprite" parent="Buidings"]
+position = Vector2( 616.395, 243.132 )
+texture = SubResource( 22 )
+offset = Vector2( -24.6475, 0.584656 )
+
+[node name="Back_fence3" type="Sprite" parent="Buidings"]
+position = Vector2( -156, 263.429 )
+texture = SubResource( 22 )
+
+[node name="Back_fence10" type="Sprite" parent="Buidings"]
+position = Vector2( -216.001, 263.429 )
+texture = SubResource( 22 )
+
+[node name="Back_fence4" type="Sprite" parent="Buidings"]
+position = Vector2( -345.714, 263.429 )
+texture = SubResource( 22 )
+
+[node name="Back_fence9" type="Sprite" parent="Buidings"]
+position = Vector2( -285.715, 263.429 )
+texture = SubResource( 22 )
+
+[node name="Barrel_type_c" type="Sprite" parent="Buidings"]
+position = Vector2( -501.714, 269 )
+texture = SubResource( 23 )
+
+[node name="Barrel_type_a" type="Sprite" parent="Buidings"]
+position = Vector2( -489.714, 268 )
+texture = SubResource( 24 )
+region_rect = Rect2( 2, 195, 13, 16 )
+
+[node name="Building1" type="Sprite" parent="Buidings"]
+position = Vector2( -425.714, 227.478 )
+texture = SubResource( 25 )
+
+[node name="Barrel_type_d2" type="Sprite" parent="Buidings"]
+position = Vector2( -324.857, 271.929 )
+texture = SubResource( 26 )
+
+[node name="Building2" type="Sprite" parent="Buidings"]
+position = Vector2( -253.857, 221.929 )
+texture = SubResource( 27 )
+
+[node name="Barrel_type_b2" type="Sprite" parent="Buidings"]
+position = Vector2( -176.072, 269.5 )
+texture = SubResource( 28 )
+
+[node name="Barrel_type_d" type="Sprite" parent="Buidings"]
+position = Vector2( -150, 270 )
+texture = SubResource( 26 )
+
+[node name="Building3" type="Sprite" parent="Buidings"]
+position = Vector2( -77.2854, 227 )
+texture = SubResource( 25 )
+
+[node name="Barrel_type_b" type="Sprite" parent="Buidings"]
+position = Vector2( 15.7148, 270 )
+texture = SubResource( 28 )
+
+[node name="Building4" type="Sprite" parent="Buidings"]
+position = Vector2( 93.4287, 227 )
+texture = SubResource( 25 )
+
+[node name="Barrel_type_d4" type="Sprite" parent="Buidings"]
+position = Vector2( 160.001, 270 )
+texture = SubResource( 26 )
+
+[node name="Barrel_type_b3" type="Sprite" parent="Buidings"]
+position = Vector2( 185.714, 270 )
+texture = SubResource( 28 )
+
+[node name="Building5" type="Sprite" parent="Buidings"]
+position = Vector2( 266.428, 221 )
+texture = SubResource( 27 )
+
+[node name="Tavern_set" type="Node2D" parent="Buidings"]
+editor/display_folded = true
+
+[node name="Smoke" type="Particles2D" parent="Buidings/Tavern_set"]
+modulate = Color( 1, 1, 1, 0.47451 )
+position = Vector2( 724.285, 114.874 )
+rotation = -1.5708
+amount = 80
+lifetime = 2.0
+speed_scale = 0.8
+process_material = SubResource( 35 )
+texture = ExtResource( 8 )
+
+[node name="Tavern" type="Sprite" parent="Buidings/Tavern_set"]
+position = Vector2( 745.143, 197 )
+texture = SubResource( 36 )
+
+[node name="Barrel_type_d3" type="Sprite" parent="Buidings"]
+position = Vector2( 893.143, 252 )
+texture = SubResource( 26 )
+
+[node name="Barrel_type_a2" type="Sprite" parent="Buidings"]
+position = Vector2( 908.143, 257 )
+texture = SubResource( 24 )
+region_rect = Rect2( 2, 195, 13, 16 )
+
+[node name="Barrel_type_c2" type="Sprite" parent="Buidings"]
+position = Vector2( 872.143, 252 )
+texture = SubResource( 23 )
+
+[node name="Blacksmith_set" type="Node2D" parent="Buidings"]
+editor/display_folded = true
+
+[node name="Smoke" type="Particles2D" parent="Buidings/Blacksmith_set"]
+modulate = Color( 1, 1, 1, 0.47451 )
+position = Vector2( 450, 182.017 )
+rotation = -1.5708
+amount = 40
+speed_scale = 0.3
+process_material = SubResource( 35 )
+texture = ExtResource( 8 )
+
+[node name="Blacksmith" type="Sprite" parent="Buidings/Blacksmith_set"]
+position = Vector2( 451.713, 229.478 )
+texture = SubResource( 37 )
+
+[node name="Boxes" type="Sprite" parent="Buidings"]
+position = Vector2( 361.214, 271 )
+scale = Vector2( 0.5, 0.5 )
+texture = SubResource( 38 )
+
+[node name="City-lanterns" type="Node2D" parent="Buidings"]
+editor/display_folded = true
+
+[node name="City_lantern" type="Sprite" parent="Buidings/City-lanterns"]
+position = Vector2( -1.14355, 244 )
+texture = SubResource( 39 )
+region_rect = Rect2( 99, 166, 29, 65 )
+
+[node name="City_lantern2" type="Sprite" parent="Buidings/City-lanterns"]
+position = Vector2( 343.428, 244 )
+texture = SubResource( 39 )
+region_rect = Rect2( 99, 166, 29, 65 )
+
+[node name="City_lantern4" type="Sprite" parent="Buidings/City-lanterns"]
+position = Vector2( 713.428, 244 )
+texture = SubResource( 39 )
+region_rect = Rect2( 99, 166, 29, 65 )
+
+[node name="City_lantern3" type="Sprite" parent="Buidings/City-lanterns"]
+position = Vector2( -355.857, 244 )
+texture = SubResource( 39 )
+region_rect = Rect2( 99, 166, 29, 65 )
+
+[node name="Light" type="Node2D" parent="Buidings/City-lanterns"]
+editor/display_folded = true
+
+[node name="Light2D" type="Light2D" parent="Buidings/City-lanterns/Light"]
+modulate = Color( 1, 1, 1, 0 )
+position = Vector2( -347.143, 230.716 )
+scale = Vector2( 0.285714, 0.285714 )
+texture = ExtResource( 9 )
+color = Color( 0.956863, 0.976471, 0.729412, 1 )
+energy = 1.3
+shadow_enabled = true
+
+[node name="Light2D2" type="Light2D" parent="Buidings/City-lanterns/Light"]
+modulate = Color( 1, 1, 1, 0 )
+position = Vector2( 7.14282, 230.716 )
+scale = Vector2( 0.285714, 0.285714 )
+texture = ExtResource( 9 )
+color = Color( 0.956863, 0.976471, 0.729412, 1 )
+energy = 1.3
+shadow_enabled = true
+
+[node name="Light2D3" type="Light2D" parent="Buidings/City-lanterns/Light"]
+modulate = Color( 1, 1, 1, 0 )
+position = Vector2( 351.714, 230.716 )
+scale = Vector2( 0.285714, 0.285714 )
+texture = ExtResource( 9 )
+color = Color( 0.972549, 1, 0.631373, 1 )
+energy = 1.3
+shadow_enabled = true
+
+[node name="Light2D4" type="Light2D" parent="Buidings/City-lanterns/Light"]
+modulate = Color( 1, 1, 1, 0 )
+position = Vector2( 453.143, 246.43 )
+scale = Vector2( 0.142857, 0.142857 )
+texture = ExtResource( 9 )
+color = Color( 0.972549, 1, 0.631373, 1 )
+energy = 1.2
+shadow_enabled = true
+
+[node name="Light2D5" type="Light2D" parent="Buidings/City-lanterns/Light"]
+modulate = Color( 1, 1, 1, 0 )
+position = Vector2( 722.857, 230.716 )
+scale = Vector2( 0.285714, 0.285714 )
+texture = ExtResource( 9 )
+color = Color( 0.956863, 0.976471, 0.729412, 1 )
+energy = 1.3
+shadow_enabled = true
+
+[node name="Light2D6" type="Light2D" parent="Buidings/City-lanterns/Light"]
+modulate = Color( 1, 1, 1, 0 )
+position = Vector2( 608.571, 222.145 )
+scale = Vector2( 0.1, 0.1 )
+texture = ExtResource( 9 )
+color = Color( 0.956863, 0.976471, 0.729412, 1 )
+energy = 1.1
+shadow_enabled = true
+
+[node name="Light2D7" type="Light2D" parent="Buidings/City-lanterns/Light"]
+modulate = Color( 1, 1, 1, 0 )
+position = Vector2( 759.992, 222.145 )
+scale = Vector2( 0.1, 0.1 )
+texture = ExtResource( 9 )
+color = Color( 0.956863, 0.976471, 0.729412, 1 )
+energy = 1.1
+shadow_enabled = true
+
+[node name="Light2D8" type="Light2D" parent="Buidings/City-lanterns/Light"]
+modulate = Color( 1, 1, 1, 0 )
+position = Vector2( 262.836, 200.716 )
+scale = Vector2( 0.1, 0.1 )
+texture = ExtResource( 9 )
+color = Color( 0.956863, 0.976471, 0.729412, 1 )
+energy = 1.1
+shadow_enabled = true
+
+[node name="Light2D9" type="Light2D" parent="Buidings/City-lanterns/Light"]
+modulate = Color( 1, 1, 1, 0 )
+position = Vector2( 104.262, 246.43 )
+scale = Vector2( 0.1, 0.1 )
+texture = ExtResource( 9 )
+color = Color( 0.956863, 0.976471, 0.729412, 1 )
+energy = 1.1
+shadow_enabled = true
+
+[node name="Light2D10" type="Light2D" parent="Buidings/City-lanterns/Light"]
+modulate = Color( 1, 1, 1, 0 )
+position = Vector2( -238.598, 246.43 )
+scale = Vector2( 0.1, 0.1 )
+texture = ExtResource( 9 )
+color = Color( 0.956863, 0.976471, 0.729412, 1 )
+energy = 1.1
+shadow_enabled = true
+
+[node name="Light2D11" type="Light2D" parent="Buidings/City-lanterns/Light"]
+modulate = Color( 1, 1, 1, 0 )
+position = Vector2( -257.172, 203.573 )
+scale = Vector2( 0.1, 0.1 )
+texture = ExtResource( 9 )
+color = Color( 0.956863, 0.976471, 0.729412, 1 )
+energy = 1.1
+shadow_enabled = true
+
+[node name="Boxes2" type="Sprite" parent="Buidings"]
+position = Vector2( -3.71411, 271.429 )
+scale = Vector2( 0.5, 0.5 )
+texture = SubResource( 38 )
+
+[node name="Boxes3" type="Sprite" parent="Buidings"]
+position = Vector2( -14.2158, 267.179 )
+rotation = -0.523599
+scale = Vector2( 0.5, 0.5 )
+texture = SubResource( 38 )
+
+[node name="Barrel_type_a3" type="Sprite" parent="Buidings"]
+position = Vector2( -368.929, 267.857 )
+texture = SubResource( 24 )
+region_rect = Rect2( 2, 195, 13, 16 )
+
+[node name="Forest_lanterns" type="Node2D" parent="Buidings"]
+editor/display_folded = true
+
+[node name="Lantern" type="Sprite" parent="Buidings/Forest_lanterns"]
+position = Vector2( -1402.86, 244.857 )
+texture = SubResource( 40 )
+
+[node name="Sprite2" type="Sprite" parent="Buidings/Forest_lanterns"]
+position = Vector2( -1194.57, 247.143 )
+texture = SubResource( 41 )
+
+[node name="Sprite3" type="Sprite" parent="Buidings/Forest_lanterns"]
+position = Vector2( -1010, 244.857 )
+texture = SubResource( 42 )
+
+[node name="Sprite4" type="Sprite" parent="Buidings/Forest_lanterns"]
+position = Vector2( -771.428, 243.429 )
+texture = SubResource( 42 )
+
+[node name="Sprite5" type="Sprite" parent="Buidings/Forest_lanterns"]
+position = Vector2( -588.571, 243.429 )
+texture = SubResource( 42 )
+
+[node name="Light" type="Node2D" parent="Buidings/Forest_lanterns"]
+
+[node name="Light2D" type="Light2D" parent="Buidings/Forest_lanterns/Light"]
+position = Vector2( -1388.57, 236.286 )
+scale = Vector2( 0.2, 0.2 )
+texture = ExtResource( 9 )
+energy = 1.2
+shadow_enabled = true
+
+[node name="Light2D2" type="Light2D" parent="Buidings/Forest_lanterns/Light"]
+position = Vector2( -1185.71, 236.286 )
+scale = Vector2( 0.2, 0.2 )
+texture = ExtResource( 9 )
+energy = 1.2
+shadow_enabled = true
+
+[node name="Light2D3" type="Light2D" parent="Buidings/Forest_lanterns/Light"]
+position = Vector2( -1001.42, 230.571 )
+scale = Vector2( 0.2, 0.2 )
+texture = ExtResource( 9 )
+energy = 1.2
+shadow_enabled = true
+
+[node name="Light2D4" type="Light2D" parent="Buidings/Forest_lanterns/Light"]
+position = Vector2( -771.428, 230.716 )
+scale = Vector2( 0.2, 0.2 )
+texture = ExtResource( 9 )
+energy = 1.2
+shadow_enabled = true
+
+[node name="Light2D5" type="Light2D" parent="Buidings/Forest_lanterns/Light"]
+position = Vector2( -579.985, 230.571 )
+scale = Vector2( 0.2, 0.2 )
+texture = ExtResource( 9 )
+energy = 1.2
+shadow_enabled = true
+
+[node name="RoadElements" type="Node2D" parent="."]
+editor/display_folded = true
+position = Vector2( 688, 192 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Fence1" type="Sprite" parent="RoadElements"]
+position = Vector2( 75, 29 )
+texture = SubResource( 43 )
+
+[node name="Fence2" type="Sprite" parent="RoadElements"]
+position = Vector2( 166, 29 )
+texture = SubResource( 44 )
+
+[node name="Fence8" type="Sprite" parent="RoadElements"]
+position = Vector2( 11, 29 )
+texture = SubResource( 44 )
+
+[node name="Fence3" type="Sprite" parent="RoadElements"]
+position = Vector2( 133, 29 )
+texture = SubResource( 45 )
+
+[node name="Fence7" type="Sprite" parent="RoadElements"]
+position = Vector2( 42, 29 )
+texture = SubResource( 45 )
+
+[node name="Fence4" type="Sprite" parent="RoadElements"]
+position = Vector2( 104, 31 )
+texture = SubResource( 46 )
+
+[node name="Fence5" type="Sprite" parent="RoadElements"]
+position = Vector2( 226, 29 )
+texture = SubResource( 47 )
+
+[node name="Fence6" type="Sprite" parent="RoadElements"]
+position = Vector2( 194, 29 )
+texture = SubResource( 47 )
+
+[node name="CitySign" type="Area2D" parent="RoadElements"]
+editor/display_folded = true
+position = Vector2( 273, 29 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="RoadElements/CitySign"]
+texture = SubResource( 48 )
+region_rect = Rect2( 193, 0, 43, 16 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RoadElements/CitySign"]
+shape = SubResource( 49 )
+
+[node name="TreeTrunk" type="StaticBody2D" parent="RoadElements"]
+position = Vector2( -80, 33 )
+z_index = 2
+collision_layer = 0
+collision_mask = 0
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="RoadElements/TreeTrunk"]
+texture = SubResource( 50 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RoadElements/TreeTrunk"]
+shape = SubResource( 51 )
+
+[node name="ColorPaletteFix" type="Node2D" parent="."]
+editor/display_folded = true
+
+[node name="NightMode" type="CanvasModulate" parent="ColorPaletteFix"]
+color = Color( 0.364706, 0.372549, 0.396078, 1 )
+
+[node name="PlayerContainer" type="Node2D" parent="."]
+
+[node name="PlayerSpawn" type="Position2D" parent="PlayerContainer"]
+position = Vector2( 240, 204.4 )
+
+[node name="Tiles" type="Node2D" parent="."]
+editor/display_folded = true
+
+[node name="ForestGrass" type="TileMap" parent="Tiles"]
+tile_set = ExtResource( 11 )
+cell_size = Vector2( 32, 32 )
+collision_layer = 2
+collision_mask = 5
+format = 1
+tile_data = PoolIntArray( 327679, 0, 3, 393215, 0, 65539, 458751, 0, 65539, 524287, 0, 131076, 458752, 0, 1, 458753, 0, 1, 458754, 0, 1, 458755, 0, 1, 458756, 0, 1, 458757, 0, 1, 458758, 0, 1, 458759, 0, 1, 458760, 0, 1, 458761, 0, 1, 458762, 0, 1, 458763, 0, 1, 458764, 0, 1, 458765, 0, 1, 458766, 0, 1, 458767, 0, 1, 458768, 0, 1, 458769, 0, 1, 458770, 0, 1, 458771, 0, 1, 458772, 0, 1, 458773, 0, 1, 458774, 0, 1, 458775, 0, 1, 458776, 0, 1, 458777, 0, 1, 458778, 0, 1, 458779, 0, 1, 458780, 0, 1, 458781, 0, 1, 458782, 0, 1, 458783, 0, 2, 589823, 0, 65536, 524288, 0, 65537, 524289, 0, 65537, 524290, 0, 65537, 524291, 0, 65537, 524292, 0, 65537, 524293, 0, 65537, 524294, 0, 65537, 524295, 0, 65537, 524296, 0, 65537, 524297, 0, 65537, 524298, 0, 65537, 524299, 0, 65537, 524300, 0, 65537, 524301, 0, 65537, 524302, 0, 65537, 524303, 0, 65537, 524304, 0, 65537, 524305, 0, 65537, 524306, 0, 65537, 524307, 0, 65537, 524308, 0, 65537, 524309, 0, 65537, 524310, 0, 65537, 524311, 0, 65537, 524312, 0, 65537, 524313, 0, 65537, 524314, 0, 65537, 524315, 0, 65537, 524316, 0, 65537, 524317, 0, 65537, 524318, 0, 65537, 524319, 0, 65538, 655359, 0, 65536, 589824, 0, 65537, 589825, 0, 65537, 589826, 0, 65537, 589827, 0, 65537, 589828, 0, 65537, 589829, 0, 65537, 589830, 0, 65537, 589831, 0, 65537, 589832, 0, 65537, 589833, 0, 65537, 589834, 0, 65537, 589835, 0, 65537, 589836, 0, 65537, 589837, 0, 65537, 589838, 0, 65537, 589839, 0, 65537, 589840, 0, 65537, 589841, 0, 65537, 589842, 0, 65537, 589843, 0, 65537, 589844, 0, 65537, 589845, 0, 65537, 589846, 0, 65537, 589847, 0, 65537, 589848, 0, 65537, 589849, 0, 65537, 589850, 0, 65537, 589851, 0, 65537, 589852, 0, 65537, 589853, 0, 65537, 589854, 0, 65537, 589855, 0, 65538, 720895, 0, 65536, 655360, 0, 65537, 655361, 0, 65537, 655362, 0, 65537, 655363, 0, 65537, 655364, 0, 65537, 655365, 0, 65537, 655366, 0, 65537, 655367, 0, 65537, 655368, 0, 65537, 655369, 0, 65537, 655370, 0, 65537, 655371, 0, 65537, 655372, 0, 65537, 655373, 0, 65537, 655374, 0, 65537, 655375, 0, 65537, 655376, 0, 65537, 655377, 0, 65537, 655378, 0, 65537, 655379, 0, 65537, 655380, 0, 65537, 655381, 0, 65537, 655382, 0, 65537, 655383, 0, 65537, 655384, 0, 65537, 655385, 0, 65537, 655386, 0, 65537, 655387, 0, 65537, 655388, 0, 65537, 655389, 0, 65537, 655390, 0, 65537, 655391, 0, 65538, 786431, 0, 65536, 720896, 0, 65537, 720897, 0, 65537, 720898, 0, 65537, 720899, 0, 65537, 720900, 0, 65537, 720901, 0, 65537, 720902, 0, 65537, 720903, 0, 65537, 720904, 0, 65537, 720905, 0, 65537, 720906, 0, 65537, 720907, 0, 65537, 720908, 0, 65537, 720909, 0, 65537, 720910, 0, 65537, 720911, 0, 65537, 720912, 0, 65537, 720913, 0, 65537, 720914, 0, 65537, 720915, 0, 65537, 720916, 0, 65537, 720917, 0, 65537, 720918, 0, 65537, 720919, 0, 65537, 720920, 0, 65537, 720921, 0, 65537, 720922, 0, 65537, 720923, 0, 65537, 720924, 0, 65537, 720925, 0, 65537, 720926, 0, 65537, 720927, 0, 65538, 851967, 0, 65536, 786432, 0, 65537, 786433, 0, 65537, 786434, 0, 65537, 786435, 0, 65537, 786436, 0, 65537, 786437, 0, 65537, 786438, 0, 65537, 786439, 0, 65537, 786440, 0, 65537, 786441, 0, 65537, 786442, 0, 65537, 786443, 0, 65537, 786444, 0, 65537, 786445, 0, 65537, 786446, 0, 65537, 786447, 0, 65537, 786448, 0, 65537, 786449, 0, 65537, 786450, 0, 65537, 786451, 0, 65537, 786452, 0, 65537, 786453, 0, 65537, 786454, 0, 65537, 786455, 0, 65537, 786456, 0, 65537, 786457, 0, 65537, 786458, 0, 65537, 786459, 0, 65537, 786460, 0, 65537, 786461, 0, 65537, 786462, 0, 65537, 786463, 0, 65538, 917503, 0, 131072, 851968, 0, 131073, 851969, 0, 131073, 851970, 0, 131073, 851971, 0, 131073, 851972, 0, 131073, 851973, 0, 131073, 851974, 0, 131073, 851975, 0, 131073, 851976, 0, 131073, 851977, 0, 131073, 851978, 0, 131073, 851979, 0, 131073, 851980, 0, 131073, 851981, 0, 131073, 851982, 0, 131073, 851983, 0, 131073, 851984, 0, 131073, 851985, 0, 131073, 851986, 0, 131073, 851987, 0, 131073, 851988, 0, 131073, 851989, 0, 131073, 851990, 0, 131073, 851991, 0, 131073, 851992, 0, 131073, 851993, 0, 131073, 851994, 0, 131073, 851995, 0, 131073, 851996, 0, 131073, 851997, 0, 131073, 851998, 0, 131073, 851999, 0, 131074 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="CityStreets" type="TileMap" parent="Tiles"]
+position = Vector2( 1804, 4 )
+tile_set = ExtResource( 12 )
+cell_size = Vector2( 32, 32 )
+collision_layer = 2
+collision_mask = 5
+format = 1
+tile_data = PoolIntArray( 131106, 0, 0, 131107, 0, 1, 131108, 0, 1, 131109, 0, 1, 131110, 0, 1, 131111, 0, 2, 196642, 0, 65536, 196643, 0, 65537, 196644, 0, 65537, 196645, 0, 65537, 196646, 0, 65537, 196647, 0, 65538, 262178, 0, 65536, 262179, 0, 65537, 262180, 0, 65537, 262181, 0, 65537, 262182, 0, 65537, 262183, 0, 65538, 327714, 0, 65536, 327715, 0, 65537, 327716, 0, 65537, 327717, 0, 65537, 327718, 0, 65537, 327719, 0, 65538, 393250, 0, 65536, 393251, 0, 65537, 393252, 0, 65537, 393253, 0, 65537, 393254, 0, 65537, 393255, 0, 65538, 524272, 0, 0, 524273, 0, 1, 524274, 0, 1, 524275, 0, 1, 524276, 0, 1, 524277, 0, 1, 524278, 0, 1, 524279, 0, 1, 524280, 0, 1, 524281, 0, 1, 524282, 0, 1, 524283, 0, 1, 524284, 0, 1, 524285, 0, 1, 524286, 0, 1, 524287, 0, 1, 458752, 0, 1, 458753, 0, 1, 458754, 0, 1, 458755, 0, 1, 458756, 0, 1, 458757, 0, 1, 458758, 0, 1, 458759, 0, 1, 458760, 0, 1, 458761, 0, 1, 458762, 0, 1, 458763, 0, 1, 458764, 0, 1, 458765, 0, 1, 458766, 0, 1, 458767, 0, 1, 458768, 0, 1, 458769, 0, 1, 458770, 0, 1, 458771, 0, 1, 458772, 0, 1, 458773, 0, 1, 458774, 0, 1, 458775, 0, 1, 458776, 0, 1, 458777, 0, 1, 458778, 0, 1, 458779, 0, 1, 458780, 0, 1, 458781, 0, 1, 458782, 0, 1, 458783, 0, 1, 458784, 0, 1, 458785, 0, 1, 458786, 0, 131078, 458787, 0, 65537, 458788, 0, 65537, 458789, 0, 65537, 458790, 0, 65537, 458791, 0, 65538, 589808, 0, 65536, 589809, 0, 65537, 589810, 0, 65537, 589811, 0, 65537, 589812, 0, 65537, 589813, 0, 65537, 589814, 0, 65537, 589815, 0, 65537, 589816, 0, 65537, 589817, 0, 65537, 589818, 0, 65537, 589819, 0, 65537, 589820, 0, 65537, 589821, 0, 65537, 589822, 0, 65537, 589823, 0, 65537, 524288, 0, 65537, 524289, 0, 65537, 524290, 0, 65537, 524291, 0, 65537, 524292, 0, 65537, 524293, 0, 65537, 524294, 0, 65537, 524295, 0, 65537, 524296, 0, 65537, 524297, 0, 65537, 524298, 0, 65537, 524299, 0, 65537, 524300, 0, 65537, 524301, 0, 65537, 524302, 0, 65537, 524303, 0, 65537, 524304, 0, 65537, 524305, 0, 65537, 524306, 0, 65537, 524307, 0, 65537, 524308, 0, 65537, 524309, 0, 65537, 524310, 0, 65537, 524311, 0, 65537, 524312, 0, 65537, 524313, 0, 65537, 524314, 0, 65537, 524315, 0, 65537, 524316, 0, 65537, 524317, 0, 65537, 524318, 0, 65537, 524319, 0, 65537, 524320, 0, 65537, 524321, 0, 65537, 524322, 0, 65537, 524323, 0, 65537, 524324, 0, 65537, 524325, 0, 65537, 524326, 0, 65537, 524327, 0, 65538, 655344, 0, 65536, 655345, 0, 65537, 655346, 0, 65537, 655347, 0, 65537, 655348, 0, 65537, 655349, 0, 65537, 655350, 0, 65537, 655351, 0, 65537, 655352, 0, 65537, 655353, 0, 65537, 655354, 0, 65537, 655355, 0, 65537, 655356, 0, 65537, 655357, 0, 65537, 655358, 0, 65537, 655359, 0, 65537, 589824, 0, 65537, 589825, 0, 65537, 589826, 0, 65537, 589827, 0, 65537, 589828, 0, 65537, 589829, 0, 65537, 589830, 0, 65537, 589831, 0, 65537, 589832, 0, 65537, 589833, 0, 65537, 589834, 0, 65537, 589835, 0, 65537, 589836, 0, 65537, 589837, 0, 65537, 589838, 0, 65537, 589839, 0, 65537, 589840, 0, 65537, 589841, 0, 65537, 589842, 0, 65537, 589843, 0, 65537, 589844, 0, 65537, 589845, 0, 65537, 589846, 0, 65537, 589847, 0, 65537, 589848, 0, 65537, 589849, 0, 65537, 589850, 0, 65537, 589851, 0, 65537, 589852, 0, 65537, 589853, 0, 65537, 589854, 0, 65537, 589855, 0, 65537, 589856, 0, 65537, 589857, 0, 65537, 589858, 0, 65537, 589859, 0, 65537, 589860, 0, 65537, 589861, 0, 65537, 589862, 0, 65537, 589863, 0, 65538, 720880, 0, 65536, 720881, 0, 65537, 720882, 0, 65537, 720883, 0, 65537, 720884, 0, 65537, 720885, 0, 65537, 720886, 0, 65537, 720887, 0, 65537, 720888, 0, 65537, 720889, 0, 65537, 720890, 0, 65537, 720891, 0, 65537, 720892, 0, 65537, 720893, 0, 65537, 720894, 0, 65537, 720895, 0, 65537, 655360, 0, 65537, 655361, 0, 65537, 655362, 0, 65537, 655363, 0, 65537, 655364, 0, 65537, 655365, 0, 65537, 655366, 0, 65537, 655367, 0, 65537, 655368, 0, 65537, 655369, 0, 65537, 655370, 0, 65537, 655371, 0, 65537, 655372, 0, 65537, 655373, 0, 65537, 655374, 0, 65537, 655375, 0, 65537, 655376, 0, 65537, 655377, 0, 65537, 655378, 0, 65537, 655379, 0, 65537, 655380, 0, 65537, 655381, 0, 65537, 655382, 0, 65537, 655383, 0, 65537, 655384, 0, 65537, 655385, 0, 65537, 655386, 0, 65537, 655387, 0, 65537, 655388, 0, 65537, 655389, 0, 65537, 655390, 0, 65537, 655391, 0, 65537, 655392, 0, 65537, 655393, 0, 65537, 655394, 0, 65537, 655395, 0, 65537, 655396, 0, 65537, 655397, 0, 65537, 655398, 0, 65537, 655399, 0, 65538, 786416, 0, 65536, 786417, 0, 65537, 786418, 0, 65537, 786419, 0, 65537, 786420, 0, 65537, 786421, 0, 65537, 786422, 0, 65537, 786423, 0, 65537, 786424, 0, 65537, 786425, 0, 65537, 786426, 0, 65537, 786427, 0, 65537, 786428, 0, 65537, 786429, 0, 65537, 786430, 0, 65537, 786431, 0, 65537, 720896, 0, 65537, 720897, 0, 65537, 720898, 0, 65537, 720899, 0, 65537, 720900, 0, 65537, 720901, 0, 65537, 720902, 0, 65537, 720903, 0, 65537, 720904, 0, 65537, 720905, 0, 65537, 720906, 0, 65537, 720907, 0, 65537, 720908, 0, 65537, 720909, 0, 65537, 720910, 0, 65537, 720911, 0, 65537, 720912, 0, 65537, 720913, 0, 65537, 720914, 0, 65537, 720915, 0, 65537, 720916, 0, 65537, 720917, 0, 65537, 720918, 0, 65537, 720919, 0, 65537, 720920, 0, 65537, 720921, 0, 65537, 720922, 0, 65537, 720923, 0, 65537, 720924, 0, 65537, 720925, 0, 65537, 720926, 0, 65537, 720927, 0, 65537, 720928, 0, 65537, 720929, 0, 65537, 720930, 0, 65537, 720931, 0, 65537, 720932, 0, 65537, 720933, 0, 65537, 720934, 0, 65537, 720935, 0, 65538, 851952, 0, 65536, 851953, 0, 65537, 851954, 0, 65537, 851955, 0, 65537, 851956, 0, 65537, 851957, 0, 65537, 851958, 0, 65537, 851959, 0, 65537, 851960, 0, 65537, 851961, 0, 65537, 851962, 0, 65537, 851963, 0, 65537, 851964, 0, 65537, 851965, 0, 65537, 851966, 0, 65537, 851967, 0, 65537, 786432, 0, 65537, 786433, 0, 65537, 786434, 0, 65537, 786435, 0, 65537, 786436, 0, 65537, 786437, 0, 65537, 786438, 0, 65537, 786439, 0, 65537, 786440, 0, 65537, 786441, 0, 65537, 786442, 0, 65537, 786443, 0, 65537, 786444, 0, 65537, 786445, 0, 65537, 786446, 0, 65537, 786447, 0, 65537, 786448, 0, 65537, 786449, 0, 65537, 786450, 0, 65537, 786451, 0, 65537, 786452, 0, 65537, 786453, 0, 65537, 786454, 0, 65537, 786455, 0, 65537, 786456, 0, 65537, 786457, 0, 65537, 786458, 0, 65537, 786459, 0, 65537, 786460, 0, 65537, 786461, 0, 65537, 786462, 0, 65537, 786463, 0, 65537, 786464, 0, 65537, 786465, 0, 65537, 786466, 0, 65537, 786467, 0, 65537, 786468, 0, 65537, 786469, 0, 65537, 786470, 0, 65537, 786471, 0, 65538, 917488, 0, 131072, 917489, 0, 131073, 917490, 0, 131073, 917491, 0, 131073, 917492, 0, 131073, 917493, 0, 131073, 917494, 0, 131073, 917495, 0, 131073, 917496, 0, 131073, 917497, 0, 131073, 917498, 0, 131073, 917499, 0, 131073, 917500, 0, 131073, 917501, 0, 131073, 917502, 0, 131073, 917503, 0, 131073, 851968, 0, 131073, 851969, 0, 131073, 851970, 0, 131073, 851971, 0, 131073, 851972, 0, 131073, 851973, 0, 131073, 851974, 0, 131073, 851975, 0, 131073, 851976, 0, 131073, 851977, 0, 131073, 851978, 0, 131073, 851979, 0, 131073, 851980, 0, 131073, 851981, 0, 131073, 851982, 0, 131073, 851983, 0, 131073, 851984, 0, 131073, 851985, 0, 131073, 851986, 0, 131073, 851987, 0, 131073, 851988, 0, 131073, 851989, 0, 131073, 851990, 0, 131073, 851991, 0, 131073, 851992, 0, 131073, 851993, 0, 131073, 851994, 0, 131073, 851995, 0, 131073, 851996, 0, 131073, 851997, 0, 131073, 851998, 0, 131073, 851999, 0, 131073, 852000, 0, 131073, 852001, 0, 131073, 852002, 0, 131073, 852003, 0, 131073, 852004, 0, 131073, 852005, 0, 131073, 852006, 0, 131073, 852007, 0, 131074 )
+
+[node name="Bridge" type="StaticBody2D" parent="Tiles"]
+editor/display_folded = true
+position = Vector2( 1160, 316 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="ColorRect" type="ColorRect" parent="Tiles/Bridge"]
+margin_left = -161.0
+margin_top = -78.0
+margin_right = 167.0
+margin_bottom = -27.0
+color = Color( 0, 0, 0, 1 )
+
+[node name="Water" type="Sprite" parent="Tiles/Bridge"]
+position = Vector2( 0, -31 )
+texture = ExtResource( 13 )
+region_rect = Rect2( 0, 0, 236, 44 )
+
+[node name="Bridge" type="Sprite" parent="Tiles/Bridge"]
+texture = ExtResource( 14 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Tiles/Bridge"]
+visible = false
+position = Vector2( -2.75659, -68.9796 )
+shape = SubResource( 52 )
+
+[node name="Lvl_transition" type="Node2D" parent="."]
+
+[node name="To_Forest" type="Area2D" parent="Lvl_transition"]
+position = Vector2( 128, 178 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Lvl_transition/To_Forest"]
+shape = SubResource( 53 )
+
+[connection signal="body_entered" from="Lvl_transition/To_Forest" to="." method="_on_To_Forest_body_entered"]

@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/getting_hit.wav-08f5641b9951b6f396127c2a96bb2176.sample"
+
+[deps]
+
+source_file="res://src/assets/audio/player_sounds/getting_hit.wav"
+dest_files=[ "res://.import/getting_hit.wav-08f5641b9951b6f396127c2a96bb2176.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/plague_doc_footsteps_2-old2.wav-ff0e12dc16406aae495e07c53c42c92a.sample"
+
+[deps]
+
+source_file="res://src/assets/audio/movement_sounds/plague_doc_footsteps_2-old2.wav"
+dest_files=[ "res://.import/plague_doc_footsteps_2-old2.wav-ff0e12dc16406aae495e07c53c42c92a.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

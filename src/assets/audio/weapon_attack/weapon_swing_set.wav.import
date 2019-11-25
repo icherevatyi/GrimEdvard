@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/weapon_swing_set.wav-1653aaf444d0bb973ca42b23370d9b36.sample"
+
+[deps]
+
+source_file="res://src/assets/audio/weapon_attack/weapon_swing_set.wav"
+dest_files=[ "res://.import/weapon_swing_set.wav-1653aaf444d0bb973ca42b23370d9b36.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0
