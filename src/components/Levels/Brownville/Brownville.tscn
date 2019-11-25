@@ -1,19 +1,20 @@
 [gd_scene load_steps=68 format=2]
 
 [ext_resource path="res://src/components/Levels/Brownville/Brownville.gd" type="Script" id=1]
-[ext_resource path="res://src/assets/img/Background/NightForest/night_sky.png" type="Texture" id=2]
-[ext_resource path="res://src/assets/img/Background/NightForest/forest_bg.png" type="Texture" id=3]
-[ext_resource path="res://src/assets/img/Background/NightForest/grass_far.png" type="Texture" id=4]
-[ext_resource path="res://src/assets/img/Background/NightForest/grass_far_end.png" type="Texture" id=5]
-[ext_resource path="res://src/assets/img/Background/Brownville/back_street.png" type="Texture" id=6]
-[ext_resource path="res://src/assets/img/GroundElements/buildings.png" type="Texture" id=7]
-[ext_resource path="res://src/assets/img/Background/Brownville/smoke_item.png" type="Texture" id=8]
-[ext_resource path="res://src/assets/img/Light/Brownville_light_night.png" type="Texture" id=9]
-[ext_resource path="res://src/assets/img/GroundElements/ForestRoadElements.png" type="Texture" id=10]
-[ext_resource path="res://src/components/Levels/Brownville/Tiles/Grass.tres" type="TileSet" id=11]
-[ext_resource path="res://src/components/Levels/Brownville/Tiles/Street.tres" type="TileSet" id=12]
-[ext_resource path="res://src/assets/img/GroundElements/Forest_lvl/forest_river.png" type="Texture" id=13]
-[ext_resource path="res://src/assets/img/GroundElements/bridge.png" type="Texture" id=14]
+[ext_resource path="res://src/assets/img/Background/NightForest/moon_lg.png" type="Texture" id=2]
+[ext_resource path="res://src/assets/img/Background/NightForest/night_sky.png" type="Texture" id=3]
+[ext_resource path="res://src/assets/img/Background/NightForest/forest_bg.png" type="Texture" id=4]
+[ext_resource path="res://src/assets/img/Background/NightForest/grass_far.png" type="Texture" id=5]
+[ext_resource path="res://src/assets/img/Background/NightForest/grass_far_end.png" type="Texture" id=6]
+[ext_resource path="res://src/assets/img/Background/Brownville/back_street.png" type="Texture" id=7]
+[ext_resource path="res://src/assets/img/GroundElements/buildings.png" type="Texture" id=8]
+[ext_resource path="res://src/assets/img/Background/Brownville/smoke_item.png" type="Texture" id=9]
+[ext_resource path="res://src/assets/img/Light/Brownville_light_night.png" type="Texture" id=10]
+[ext_resource path="res://src/assets/img/GroundElements/ForestRoadElements.png" type="Texture" id=11]
+[ext_resource path="res://src/components/Levels/Brownville/Tiles/Grass.tres" type="TileSet" id=12]
+[ext_resource path="res://src/components/Levels/Brownville/Tiles/Street.tres" type="TileSet" id=13]
+[ext_resource path="res://src/assets/img/GroundElements/Forest_lvl/forest_river.png" type="Texture" id=14]
+[ext_resource path="res://src/assets/img/GroundElements/bridge.png" type="Texture" id=15]
 
 [sub_resource type="Gradient" id=1]
 colors = PoolColorArray( 0.300781, 1, 0.91806, 1, 1, 1, 1, 1 )
@@ -66,97 +67,93 @@ scale_curve = SubResource( 9 )
 color_ramp = SubResource( 7 )
 
 [sub_resource type="AtlasTexture" id=11]
-atlas = ExtResource( 2 )
-region = Rect2( 0, 74, 74, 74 )
-
-[sub_resource type="AtlasTexture" id=12]
-atlas = ExtResource( 2 )
+atlas = ExtResource( 3 )
 region = Rect2( 0, 0, 250, 56 )
 
-[sub_resource type="AtlasTexture" id=13]
-atlas = ExtResource( 2 )
+[sub_resource type="AtlasTexture" id=12]
+atlas = ExtResource( 3 )
 region = Rect2( 251, 0, 211, 35 )
 
-[sub_resource type="AtlasTexture" id=14]
-atlas = ExtResource( 2 )
+[sub_resource type="AtlasTexture" id=13]
+atlas = ExtResource( 3 )
 region = Rect2( 224, 52, 112, 17 )
 
-[sub_resource type="AtlasTexture" id=15]
-atlas = ExtResource( 2 )
+[sub_resource type="AtlasTexture" id=14]
+atlas = ExtResource( 3 )
 region = Rect2( 0, 57, 69, 15 )
 
-[sub_resource type="AtlasTexture" id=16]
-atlas = ExtResource( 2 )
+[sub_resource type="AtlasTexture" id=15]
+atlas = ExtResource( 3 )
 region = Rect2( 70, 60, 50, 7 )
 
-[sub_resource type="AtlasTexture" id=17]
-atlas = ExtResource( 2 )
+[sub_resource type="AtlasTexture" id=16]
+atlas = ExtResource( 3 )
 region = Rect2( 176, 58, 47, 6 )
 
-[sub_resource type="AtlasTexture" id=18]
-atlas = ExtResource( 2 )
+[sub_resource type="AtlasTexture" id=17]
+atlas = ExtResource( 3 )
 region = Rect2( 337, 47, 66, 19 )
 
-[sub_resource type="AtlasTexture" id=19]
-atlas = ExtResource( 2 )
+[sub_resource type="AtlasTexture" id=18]
+atlas = ExtResource( 3 )
 region = Rect2( 405, 54, 53, 9 )
 
-[sub_resource type="Gradient" id=20]
+[sub_resource type="Gradient" id=19]
 offsets = PoolRealArray( 0, 0.533113, 0.728477, 0.781457 )
 colors = PoolColorArray( 0, 0, 0, 1, 0.0696564, 0.0889391, 0.214844, 1, 0.037262, 0.289063, 0.259555, 1, 0.0151062, 0.0234375, 0.0203132, 1 )
 
-[sub_resource type="GradientTexture" id=21]
-gradient = SubResource( 20 )
+[sub_resource type="GradientTexture" id=20]
+gradient = SubResource( 19 )
 
-[sub_resource type="AtlasTexture" id=22]
-atlas = ExtResource( 7 )
+[sub_resource type="AtlasTexture" id=21]
+atlas = ExtResource( 8 )
 region = Rect2( 11, 164, 60, 26 )
 
-[sub_resource type="AtlasTexture" id=23]
-atlas = ExtResource( 7 )
+[sub_resource type="AtlasTexture" id=22]
+atlas = ExtResource( 8 )
 region = Rect2( 47, 191, 25, 20 )
 
-[sub_resource type="AtlasTexture" id=24]
-atlas = ExtResource( 7 )
+[sub_resource type="AtlasTexture" id=23]
+atlas = ExtResource( 8 )
 region = Rect2( 2, 195, 13, 16 )
 
-[sub_resource type="AtlasTexture" id=25]
-atlas = ExtResource( 7 )
+[sub_resource type="AtlasTexture" id=24]
+atlas = ExtResource( 8 )
 region = Rect2( 0, 62, 130, 99 )
 
-[sub_resource type="AtlasTexture" id=26]
-atlas = ExtResource( 7 )
+[sub_resource type="AtlasTexture" id=25]
+atlas = ExtResource( 8 )
 region = Rect2( 75, 192, 23, 19 )
 
-[sub_resource type="AtlasTexture" id=27]
-atlas = ExtResource( 7 )
+[sub_resource type="AtlasTexture" id=26]
+atlas = ExtResource( 8 )
 region = Rect2( 131, 50, 140, 111 )
 
-[sub_resource type="AtlasTexture" id=28]
-atlas = ExtResource( 7 )
+[sub_resource type="AtlasTexture" id=27]
+atlas = ExtResource( 8 )
 region = Rect2( 18, 191, 26, 20 )
 
-[sub_resource type="Gradient" id=29]
+[sub_resource type="Gradient" id=28]
 colors = PoolColorArray( 0.618652, 0.618652, 0.618652, 0.894118, 1, 1, 1, 0.286275 )
 
-[sub_resource type="GradientTexture" id=30]
-gradient = SubResource( 29 )
+[sub_resource type="GradientTexture" id=29]
+gradient = SubResource( 28 )
 
-[sub_resource type="Curve" id=31]
+[sub_resource type="Curve" id=30]
 max_value = 4.0
 _data = [ Vector2( 0.117442, 0.2752 ), 0.0, 2.57634, 0, 0, Vector2( 1, 0 ), 0.0, 0.0, 0, 0 ]
 
-[sub_resource type="CurveTexture" id=32]
-curve = SubResource( 31 )
+[sub_resource type="CurveTexture" id=31]
+curve = SubResource( 30 )
 
-[sub_resource type="Curve" id=33]
+[sub_resource type="Curve" id=32]
 _data = [ Vector2( 0, 0.1238 ), 0.0, 0.0, 0, 0, Vector2( 1, 1 ), 0.0, 0.0, 0, 0 ]
 
-[sub_resource type="CurveTexture" id=34]
-curve = SubResource( 33 )
+[sub_resource type="CurveTexture" id=33]
+curve = SubResource( 32 )
 
-[sub_resource type="ParticlesMaterial" id=35]
-trail_size_modifier = SubResource( 34 )
+[sub_resource type="ParticlesMaterial" id=34]
+trail_size_modifier = SubResource( 33 )
 flag_disable_z = true
 gravity = Vector3( 0, 0, 0 )
 initial_velocity = 50.0
@@ -165,75 +162,75 @@ orbit_velocity = 0.0
 orbit_velocity_random = 0.0
 radial_accel = 15.0
 scale = 5.0
-scale_curve = SubResource( 32 )
-color_ramp = SubResource( 30 )
+scale_curve = SubResource( 31 )
+color_ramp = SubResource( 29 )
 
-[sub_resource type="AtlasTexture" id=36]
-atlas = ExtResource( 7 )
+[sub_resource type="AtlasTexture" id=35]
+atlas = ExtResource( 8 )
 region = Rect2( 450, 0, 361, 161 )
 
-[sub_resource type="AtlasTexture" id=37]
-atlas = ExtResource( 7 )
+[sub_resource type="AtlasTexture" id=36]
+atlas = ExtResource( 8 )
 region = Rect2( 272, 69, 177, 92 )
 
-[sub_resource type="AtlasTexture" id=38]
-atlas = ExtResource( 7 )
+[sub_resource type="AtlasTexture" id=37]
+atlas = ExtResource( 8 )
 region = Rect2( 31, 212, 38, 21 )
 
-[sub_resource type="AtlasTexture" id=39]
-atlas = ExtResource( 7 )
+[sub_resource type="AtlasTexture" id=38]
+atlas = ExtResource( 8 )
 region = Rect2( 99, 166, 29, 65 )
 
-[sub_resource type="AtlasTexture" id=40]
-atlas = ExtResource( 7 )
+[sub_resource type="AtlasTexture" id=39]
+atlas = ExtResource( 8 )
 region = Rect2( 164, 166, 39, 65 )
 
-[sub_resource type="AtlasTexture" id=41]
-atlas = ExtResource( 7 )
+[sub_resource type="AtlasTexture" id=40]
+atlas = ExtResource( 8 )
 region = Rect2( 208, 164, 28, 60 )
 
-[sub_resource type="AtlasTexture" id=42]
-atlas = ExtResource( 7 )
+[sub_resource type="AtlasTexture" id=41]
+atlas = ExtResource( 8 )
 region = Rect2( 130, 166, 29, 66 )
 
-[sub_resource type="AtlasTexture" id=43]
-atlas = ExtResource( 10 )
+[sub_resource type="AtlasTexture" id=42]
+atlas = ExtResource( 11 )
 region = Rect2( 0, 2, 25, 14 )
 
-[sub_resource type="AtlasTexture" id=44]
-atlas = ExtResource( 10 )
+[sub_resource type="AtlasTexture" id=43]
+atlas = ExtResource( 11 )
 region = Rect2( 29, 2, 25, 14 )
 
-[sub_resource type="AtlasTexture" id=45]
-atlas = ExtResource( 10 )
+[sub_resource type="AtlasTexture" id=44]
+atlas = ExtResource( 11 )
 region = Rect2( 58, 2, 24, 14 )
 
-[sub_resource type="AtlasTexture" id=46]
-atlas = ExtResource( 10 )
+[sub_resource type="AtlasTexture" id=45]
+atlas = ExtResource( 11 )
 region = Rect2( 85, 3, 19, 15 )
 
-[sub_resource type="AtlasTexture" id=47]
-atlas = ExtResource( 10 )
+[sub_resource type="AtlasTexture" id=46]
+atlas = ExtResource( 11 )
 region = Rect2( 165, 2, 24, 14 )
 
-[sub_resource type="AtlasTexture" id=48]
-atlas = ExtResource( 10 )
+[sub_resource type="AtlasTexture" id=47]
+atlas = ExtResource( 11 )
 region = Rect2( 193, 0, 43, 16 )
 
-[sub_resource type="RectangleShape2D" id=49]
+[sub_resource type="RectangleShape2D" id=48]
 extents = Vector2( 22, 8 )
 
-[sub_resource type="AtlasTexture" id=50]
-atlas = ExtResource( 10 )
+[sub_resource type="AtlasTexture" id=49]
+atlas = ExtResource( 11 )
 region = Rect2( 0, 18, 20, 14 )
 
-[sub_resource type="RectangleShape2D" id=51]
+[sub_resource type="RectangleShape2D" id=50]
 extents = Vector2( 10, 7 )
 
-[sub_resource type="RectangleShape2D" id=52]
+[sub_resource type="RectangleShape2D" id=51]
 extents = Vector2( 171.064, 18.993 )
 
-[sub_resource type="RectangleShape2D" id=53]
+[sub_resource type="RectangleShape2D" id=52]
 extents = Vector2( 10, 50 )
 
 [node name="World" type="Node2D"]
@@ -263,10 +260,11 @@ process_material = SubResource( 10 )
 
 [node name="Moon" type="Sprite" parent="Background/Clouds"]
 modulate = Color( 0.886275, 0.890196, 0.890196, 1 )
-position = Vector2( 1212.33, 107.04 )
+position = Vector2( 1212, 90 )
+scale = Vector2( 0.2, 0.2 )
 z_index = -2
 z_as_relative = false
-texture = SubResource( 11 )
+texture = ExtResource( 2 )
 
 [node name="Clouds" type="ParallaxLayer" parent="Background/Clouds"]
 editor/display_folded = true
@@ -277,38 +275,37 @@ motion_mirroring = Vector2( 1200, 0 )
 
 [node name="Sprite" type="Sprite" parent="Background/Clouds/Clouds"]
 position = Vector2( 244.334, 131.066 )
-texture = SubResource( 12 )
+texture = SubResource( 11 )
 
 [node name="Sprite2" type="Sprite" parent="Background/Clouds/Clouds"]
 position = Vector2( 551.167, 131.733 )
-texture = SubResource( 13 )
+texture = SubResource( 12 )
 
 [node name="Sprite3" type="Sprite" parent="Background/Clouds/Clouds"]
 position = Vector2( 756.667, 118.833 )
-texture = SubResource( 14 )
+texture = SubResource( 13 )
 
 [node name="Sprite4" type="Sprite" parent="Background/Clouds/Clouds"]
 position = Vector2( 411.833, 112.567 )
-texture = SubResource( 15 )
+texture = SubResource( 14 )
 
 [node name="Sprite5" type="Sprite" parent="Background/Clouds/Clouds"]
 position = Vector2( 891.834, 100.833 )
-texture = SubResource( 16 )
+texture = SubResource( 15 )
 
 [node name="Sprite6" type="Sprite" parent="Background/Clouds/Clouds"]
 position = Vector2( 977.167, 110.333 )
-texture = SubResource( 17 )
+texture = SubResource( 16 )
 
 [node name="Sprite7" type="Sprite" parent="Background/Clouds/Clouds"]
 position = Vector2( 898.168, 137 )
-texture = SubResource( 18 )
+texture = SubResource( 17 )
 
 [node name="Sprite8" type="Sprite" parent="Background/Clouds/Clouds"]
 position = Vector2( 1148.67, 112.567 )
-texture = SubResource( 19 )
+texture = SubResource( 18 )
 
 [node name="Forest" type="ParallaxBackground" parent="Background"]
-editor/display_folded = true
 
 [node name="Trees" type="ParallaxLayer" parent="Background/Forest"]
 position = Vector2( 358, 192 )
@@ -317,20 +314,20 @@ motion_mirroring = Vector2( 561, 0 )
 
 [node name="Sprite" type="Sprite" parent="Background/Forest/Trees"]
 position = Vector2( 282, 0 )
-texture = ExtResource( 3 )
+texture = ExtResource( 4 )
 region_enabled = true
 region_rect = Rect2( 0, 0, 561, 83 )
 
 [node name="Grass" type="Sprite" parent="Background"]
 position = Vector2( 492, 228 )
 scale = Vector2( 0.901818, 1 )
-texture = ExtResource( 4 )
+texture = ExtResource( 5 )
 region_enabled = true
 region_rect = Rect2( 0, 0, 1100, 29 )
 
 [node name="Grass_end" type="Sprite" parent="Background"]
 position = Vector2( 995, 231 )
-texture = ExtResource( 5 )
+texture = ExtResource( 6 )
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 layer = -2
@@ -339,7 +336,7 @@ layer = -2
 position = Vector2( 1312, -2.47383e-010 )
 rotation = 1.57079
 scale = Vector2( 0.216826, 1330.56 )
-texture = SubResource( 21 )
+texture = SubResource( 20 )
 centered = false
 
 [node name="Buidings" type="Node2D" parent="."]
@@ -349,104 +346,104 @@ scale = Vector2( 0.7, 0.7 )
 
 [node name="Back_Street" type="Sprite" parent="Buidings"]
 position = Vector2( 725.143, 276 )
-texture = ExtResource( 6 )
+texture = ExtResource( 7 )
 region_enabled = true
 region_rect = Rect2( 0, 0, 384, 48 )
 
 [node name="Back_fence" type="Sprite" parent="Buidings"]
 position = Vector2( 17.7144, 263.429 )
-texture = SubResource( 22 )
+texture = SubResource( 21 )
 
 [node name="Back_fence8" type="Sprite" parent="Buidings"]
 position = Vector2( -42.2854, 263.429 )
-texture = SubResource( 22 )
+texture = SubResource( 21 )
 
 [node name="Back_fence2" type="Sprite" parent="Buidings"]
 position = Vector2( 177, 263.429 )
-texture = SubResource( 22 )
+texture = SubResource( 21 )
 
 [node name="Back_fence7" type="Sprite" parent="Buidings"]
 position = Vector2( 345.571, 263.429 )
-texture = SubResource( 22 )
+texture = SubResource( 21 )
 
 [node name="Back_fence5" type="Sprite" parent="Buidings"]
 position = Vector2( 556.395, 243.132 )
-texture = SubResource( 22 )
+texture = SubResource( 21 )
 offset = Vector2( -24.6475, 0.584656 )
 
 [node name="Back_fence6" type="Sprite" parent="Buidings"]
 position = Vector2( 616.395, 243.132 )
-texture = SubResource( 22 )
+texture = SubResource( 21 )
 offset = Vector2( -24.6475, 0.584656 )
 
 [node name="Back_fence3" type="Sprite" parent="Buidings"]
 position = Vector2( -156, 263.429 )
-texture = SubResource( 22 )
+texture = SubResource( 21 )
 
 [node name="Back_fence10" type="Sprite" parent="Buidings"]
 position = Vector2( -216.001, 263.429 )
-texture = SubResource( 22 )
+texture = SubResource( 21 )
 
 [node name="Back_fence4" type="Sprite" parent="Buidings"]
 position = Vector2( -345.714, 263.429 )
-texture = SubResource( 22 )
+texture = SubResource( 21 )
 
 [node name="Back_fence9" type="Sprite" parent="Buidings"]
 position = Vector2( -285.715, 263.429 )
-texture = SubResource( 22 )
+texture = SubResource( 21 )
 
 [node name="Barrel_type_c" type="Sprite" parent="Buidings"]
 position = Vector2( -501.714, 269 )
-texture = SubResource( 23 )
+texture = SubResource( 22 )
 
 [node name="Barrel_type_a" type="Sprite" parent="Buidings"]
 position = Vector2( -489.714, 268 )
-texture = SubResource( 24 )
+texture = SubResource( 23 )
 region_rect = Rect2( 2, 195, 13, 16 )
 
 [node name="Building1" type="Sprite" parent="Buidings"]
 position = Vector2( -425.714, 227.478 )
-texture = SubResource( 25 )
+texture = SubResource( 24 )
 
 [node name="Barrel_type_d2" type="Sprite" parent="Buidings"]
 position = Vector2( -324.857, 271.929 )
-texture = SubResource( 26 )
+texture = SubResource( 25 )
 
 [node name="Building2" type="Sprite" parent="Buidings"]
 position = Vector2( -253.857, 221.929 )
-texture = SubResource( 27 )
+texture = SubResource( 26 )
 
 [node name="Barrel_type_b2" type="Sprite" parent="Buidings"]
 position = Vector2( -176.072, 269.5 )
-texture = SubResource( 28 )
+texture = SubResource( 27 )
 
 [node name="Barrel_type_d" type="Sprite" parent="Buidings"]
 position = Vector2( -150, 270 )
-texture = SubResource( 26 )
+texture = SubResource( 25 )
 
 [node name="Building3" type="Sprite" parent="Buidings"]
 position = Vector2( -77.2854, 227 )
-texture = SubResource( 25 )
+texture = SubResource( 24 )
 
 [node name="Barrel_type_b" type="Sprite" parent="Buidings"]
 position = Vector2( 15.7148, 270 )
-texture = SubResource( 28 )
+texture = SubResource( 27 )
 
 [node name="Building4" type="Sprite" parent="Buidings"]
 position = Vector2( 93.4287, 227 )
-texture = SubResource( 25 )
+texture = SubResource( 24 )
 
 [node name="Barrel_type_d4" type="Sprite" parent="Buidings"]
 position = Vector2( 160.001, 270 )
-texture = SubResource( 26 )
+texture = SubResource( 25 )
 
 [node name="Barrel_type_b3" type="Sprite" parent="Buidings"]
 position = Vector2( 185.714, 270 )
-texture = SubResource( 28 )
+texture = SubResource( 27 )
 
 [node name="Building5" type="Sprite" parent="Buidings"]
 position = Vector2( 266.428, 221 )
-texture = SubResource( 27 )
+texture = SubResource( 26 )
 
 [node name="Tavern_set" type="Node2D" parent="Buidings"]
 editor/display_folded = true
@@ -458,25 +455,25 @@ rotation = -1.5708
 amount = 80
 lifetime = 2.0
 speed_scale = 0.8
-process_material = SubResource( 35 )
-texture = ExtResource( 8 )
+process_material = SubResource( 34 )
+texture = ExtResource( 9 )
 
 [node name="Tavern" type="Sprite" parent="Buidings/Tavern_set"]
 position = Vector2( 745.143, 197 )
-texture = SubResource( 36 )
+texture = SubResource( 35 )
 
 [node name="Barrel_type_d3" type="Sprite" parent="Buidings"]
 position = Vector2( 893.143, 252 )
-texture = SubResource( 26 )
+texture = SubResource( 25 )
 
 [node name="Barrel_type_a2" type="Sprite" parent="Buidings"]
 position = Vector2( 908.143, 257 )
-texture = SubResource( 24 )
+texture = SubResource( 23 )
 region_rect = Rect2( 2, 195, 13, 16 )
 
 [node name="Barrel_type_c2" type="Sprite" parent="Buidings"]
 position = Vector2( 872.143, 252 )
-texture = SubResource( 23 )
+texture = SubResource( 22 )
 
 [node name="Blacksmith_set" type="Node2D" parent="Buidings"]
 editor/display_folded = true
@@ -487,39 +484,39 @@ position = Vector2( 450, 182.017 )
 rotation = -1.5708
 amount = 40
 speed_scale = 0.3
-process_material = SubResource( 35 )
-texture = ExtResource( 8 )
+process_material = SubResource( 34 )
+texture = ExtResource( 9 )
 
 [node name="Blacksmith" type="Sprite" parent="Buidings/Blacksmith_set"]
 position = Vector2( 451.713, 229.478 )
-texture = SubResource( 37 )
+texture = SubResource( 36 )
 
 [node name="Boxes" type="Sprite" parent="Buidings"]
 position = Vector2( 361.214, 271 )
 scale = Vector2( 0.5, 0.5 )
-texture = SubResource( 38 )
+texture = SubResource( 37 )
 
 [node name="City-lanterns" type="Node2D" parent="Buidings"]
 editor/display_folded = true
 
 [node name="City_lantern" type="Sprite" parent="Buidings/City-lanterns"]
 position = Vector2( -1.14355, 244 )
-texture = SubResource( 39 )
+texture = SubResource( 38 )
 region_rect = Rect2( 99, 166, 29, 65 )
 
 [node name="City_lantern2" type="Sprite" parent="Buidings/City-lanterns"]
 position = Vector2( 343.428, 244 )
-texture = SubResource( 39 )
+texture = SubResource( 38 )
 region_rect = Rect2( 99, 166, 29, 65 )
 
 [node name="City_lantern4" type="Sprite" parent="Buidings/City-lanterns"]
 position = Vector2( 713.428, 244 )
-texture = SubResource( 39 )
+texture = SubResource( 38 )
 region_rect = Rect2( 99, 166, 29, 65 )
 
 [node name="City_lantern3" type="Sprite" parent="Buidings/City-lanterns"]
 position = Vector2( -355.857, 244 )
-texture = SubResource( 39 )
+texture = SubResource( 38 )
 region_rect = Rect2( 99, 166, 29, 65 )
 
 [node name="Light" type="Node2D" parent="Buidings/City-lanterns"]
@@ -529,7 +526,7 @@ editor/display_folded = true
 modulate = Color( 1, 1, 1, 0 )
 position = Vector2( -347.143, 230.716 )
 scale = Vector2( 0.285714, 0.285714 )
-texture = ExtResource( 9 )
+texture = ExtResource( 10 )
 color = Color( 0.956863, 0.976471, 0.729412, 1 )
 energy = 1.3
 shadow_enabled = true
@@ -538,7 +535,7 @@ shadow_enabled = true
 modulate = Color( 1, 1, 1, 0 )
 position = Vector2( 7.14282, 230.716 )
 scale = Vector2( 0.285714, 0.285714 )
-texture = ExtResource( 9 )
+texture = ExtResource( 10 )
 color = Color( 0.956863, 0.976471, 0.729412, 1 )
 energy = 1.3
 shadow_enabled = true
@@ -547,7 +544,7 @@ shadow_enabled = true
 modulate = Color( 1, 1, 1, 0 )
 position = Vector2( 351.714, 230.716 )
 scale = Vector2( 0.285714, 0.285714 )
-texture = ExtResource( 9 )
+texture = ExtResource( 10 )
 color = Color( 0.972549, 1, 0.631373, 1 )
 energy = 1.3
 shadow_enabled = true
@@ -556,7 +553,7 @@ shadow_enabled = true
 modulate = Color( 1, 1, 1, 0 )
 position = Vector2( 453.143, 246.43 )
 scale = Vector2( 0.142857, 0.142857 )
-texture = ExtResource( 9 )
+texture = ExtResource( 10 )
 color = Color( 0.972549, 1, 0.631373, 1 )
 energy = 1.2
 shadow_enabled = true
@@ -565,7 +562,7 @@ shadow_enabled = true
 modulate = Color( 1, 1, 1, 0 )
 position = Vector2( 722.857, 230.716 )
 scale = Vector2( 0.285714, 0.285714 )
-texture = ExtResource( 9 )
+texture = ExtResource( 10 )
 color = Color( 0.956863, 0.976471, 0.729412, 1 )
 energy = 1.3
 shadow_enabled = true
@@ -574,7 +571,7 @@ shadow_enabled = true
 modulate = Color( 1, 1, 1, 0 )
 position = Vector2( 608.571, 222.145 )
 scale = Vector2( 0.1, 0.1 )
-texture = ExtResource( 9 )
+texture = ExtResource( 10 )
 color = Color( 0.956863, 0.976471, 0.729412, 1 )
 energy = 1.1
 shadow_enabled = true
@@ -583,7 +580,7 @@ shadow_enabled = true
 modulate = Color( 1, 1, 1, 0 )
 position = Vector2( 759.992, 222.145 )
 scale = Vector2( 0.1, 0.1 )
-texture = ExtResource( 9 )
+texture = ExtResource( 10 )
 color = Color( 0.956863, 0.976471, 0.729412, 1 )
 energy = 1.1
 shadow_enabled = true
@@ -592,7 +589,7 @@ shadow_enabled = true
 modulate = Color( 1, 1, 1, 0 )
 position = Vector2( 262.836, 200.716 )
 scale = Vector2( 0.1, 0.1 )
-texture = ExtResource( 9 )
+texture = ExtResource( 10 )
 color = Color( 0.956863, 0.976471, 0.729412, 1 )
 energy = 1.1
 shadow_enabled = true
@@ -601,7 +598,7 @@ shadow_enabled = true
 modulate = Color( 1, 1, 1, 0 )
 position = Vector2( 104.262, 246.43 )
 scale = Vector2( 0.1, 0.1 )
-texture = ExtResource( 9 )
+texture = ExtResource( 10 )
 color = Color( 0.956863, 0.976471, 0.729412, 1 )
 energy = 1.1
 shadow_enabled = true
@@ -610,7 +607,7 @@ shadow_enabled = true
 modulate = Color( 1, 1, 1, 0 )
 position = Vector2( -238.598, 246.43 )
 scale = Vector2( 0.1, 0.1 )
-texture = ExtResource( 9 )
+texture = ExtResource( 10 )
 color = Color( 0.956863, 0.976471, 0.729412, 1 )
 energy = 1.1
 shadow_enabled = true
@@ -619,7 +616,7 @@ shadow_enabled = true
 modulate = Color( 1, 1, 1, 0 )
 position = Vector2( -257.172, 203.573 )
 scale = Vector2( 0.1, 0.1 )
-texture = ExtResource( 9 )
+texture = ExtResource( 10 )
 color = Color( 0.956863, 0.976471, 0.729412, 1 )
 energy = 1.1
 shadow_enabled = true
@@ -627,17 +624,17 @@ shadow_enabled = true
 [node name="Boxes2" type="Sprite" parent="Buidings"]
 position = Vector2( -3.71411, 271.429 )
 scale = Vector2( 0.5, 0.5 )
-texture = SubResource( 38 )
+texture = SubResource( 37 )
 
 [node name="Boxes3" type="Sprite" parent="Buidings"]
 position = Vector2( -14.2158, 267.179 )
 rotation = -0.523599
 scale = Vector2( 0.5, 0.5 )
-texture = SubResource( 38 )
+texture = SubResource( 37 )
 
 [node name="Barrel_type_a3" type="Sprite" parent="Buidings"]
 position = Vector2( -368.929, 267.857 )
-texture = SubResource( 24 )
+texture = SubResource( 23 )
 region_rect = Rect2( 2, 195, 13, 16 )
 
 [node name="Forest_lanterns" type="Node2D" parent="Buidings"]
@@ -645,58 +642,58 @@ editor/display_folded = true
 
 [node name="Lantern" type="Sprite" parent="Buidings/Forest_lanterns"]
 position = Vector2( -1402.86, 244.857 )
-texture = SubResource( 40 )
+texture = SubResource( 39 )
 
 [node name="Sprite2" type="Sprite" parent="Buidings/Forest_lanterns"]
 position = Vector2( -1194.57, 247.143 )
-texture = SubResource( 41 )
+texture = SubResource( 40 )
 
 [node name="Sprite3" type="Sprite" parent="Buidings/Forest_lanterns"]
 position = Vector2( -1010, 244.857 )
-texture = SubResource( 42 )
+texture = SubResource( 41 )
 
 [node name="Sprite4" type="Sprite" parent="Buidings/Forest_lanterns"]
 position = Vector2( -771.428, 243.429 )
-texture = SubResource( 42 )
+texture = SubResource( 41 )
 
 [node name="Sprite5" type="Sprite" parent="Buidings/Forest_lanterns"]
 position = Vector2( -588.571, 243.429 )
-texture = SubResource( 42 )
+texture = SubResource( 41 )
 
 [node name="Light" type="Node2D" parent="Buidings/Forest_lanterns"]
 
 [node name="Light2D" type="Light2D" parent="Buidings/Forest_lanterns/Light"]
 position = Vector2( -1388.57, 236.286 )
 scale = Vector2( 0.2, 0.2 )
-texture = ExtResource( 9 )
+texture = ExtResource( 10 )
 energy = 1.2
 shadow_enabled = true
 
 [node name="Light2D2" type="Light2D" parent="Buidings/Forest_lanterns/Light"]
 position = Vector2( -1185.71, 236.286 )
 scale = Vector2( 0.2, 0.2 )
-texture = ExtResource( 9 )
+texture = ExtResource( 10 )
 energy = 1.2
 shadow_enabled = true
 
 [node name="Light2D3" type="Light2D" parent="Buidings/Forest_lanterns/Light"]
 position = Vector2( -1001.42, 230.571 )
 scale = Vector2( 0.2, 0.2 )
-texture = ExtResource( 9 )
+texture = ExtResource( 10 )
 energy = 1.2
 shadow_enabled = true
 
 [node name="Light2D4" type="Light2D" parent="Buidings/Forest_lanterns/Light"]
 position = Vector2( -771.428, 230.716 )
 scale = Vector2( 0.2, 0.2 )
-texture = ExtResource( 9 )
+texture = ExtResource( 10 )
 energy = 1.2
 shadow_enabled = true
 
 [node name="Light2D5" type="Light2D" parent="Buidings/Forest_lanterns/Light"]
 position = Vector2( -579.985, 230.571 )
 scale = Vector2( 0.2, 0.2 )
-texture = ExtResource( 9 )
+texture = ExtResource( 10 )
 energy = 1.2
 shadow_enabled = true
 
@@ -709,35 +706,35 @@ __meta__ = {
 
 [node name="Fence1" type="Sprite" parent="RoadElements"]
 position = Vector2( 75, 29 )
-texture = SubResource( 43 )
+texture = SubResource( 42 )
 
 [node name="Fence2" type="Sprite" parent="RoadElements"]
 position = Vector2( 166, 29 )
-texture = SubResource( 44 )
+texture = SubResource( 43 )
 
 [node name="Fence8" type="Sprite" parent="RoadElements"]
 position = Vector2( 11, 29 )
-texture = SubResource( 44 )
+texture = SubResource( 43 )
 
 [node name="Fence3" type="Sprite" parent="RoadElements"]
 position = Vector2( 133, 29 )
-texture = SubResource( 45 )
+texture = SubResource( 44 )
 
 [node name="Fence7" type="Sprite" parent="RoadElements"]
 position = Vector2( 42, 29 )
-texture = SubResource( 45 )
+texture = SubResource( 44 )
 
 [node name="Fence4" type="Sprite" parent="RoadElements"]
 position = Vector2( 104, 31 )
-texture = SubResource( 46 )
+texture = SubResource( 45 )
 
 [node name="Fence5" type="Sprite" parent="RoadElements"]
 position = Vector2( 226, 29 )
-texture = SubResource( 47 )
+texture = SubResource( 46 )
 
 [node name="Fence6" type="Sprite" parent="RoadElements"]
 position = Vector2( 194, 29 )
-texture = SubResource( 47 )
+texture = SubResource( 46 )
 
 [node name="CitySign" type="Area2D" parent="RoadElements"]
 editor/display_folded = true
@@ -747,11 +744,11 @@ __meta__ = {
 }
 
 [node name="Sprite" type="Sprite" parent="RoadElements/CitySign"]
-texture = SubResource( 48 )
+texture = SubResource( 47 )
 region_rect = Rect2( 193, 0, 43, 16 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RoadElements/CitySign"]
-shape = SubResource( 49 )
+shape = SubResource( 48 )
 
 [node name="TreeTrunk" type="StaticBody2D" parent="RoadElements"]
 position = Vector2( -80, 33 )
@@ -763,10 +760,10 @@ __meta__ = {
 }
 
 [node name="Sprite" type="Sprite" parent="RoadElements/TreeTrunk"]
-texture = SubResource( 50 )
+texture = SubResource( 49 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RoadElements/TreeTrunk"]
-shape = SubResource( 51 )
+shape = SubResource( 50 )
 
 [node name="ColorPaletteFix" type="Node2D" parent="."]
 editor/display_folded = true
@@ -783,7 +780,7 @@ position = Vector2( 240, 204.4 )
 editor/display_folded = true
 
 [node name="ForestGrass" type="TileMap" parent="Tiles"]
-tile_set = ExtResource( 11 )
+tile_set = ExtResource( 12 )
 cell_size = Vector2( 32, 32 )
 collision_layer = 2
 collision_mask = 5
@@ -795,7 +792,7 @@ __meta__ = {
 
 [node name="CityStreets" type="TileMap" parent="Tiles"]
 position = Vector2( 1804, 4 )
-tile_set = ExtResource( 12 )
+tile_set = ExtResource( 13 )
 cell_size = Vector2( 32, 32 )
 collision_layer = 2
 collision_mask = 5
@@ -818,16 +815,16 @@ color = Color( 0, 0, 0, 1 )
 
 [node name="Water" type="Sprite" parent="Tiles/Bridge"]
 position = Vector2( 0, -31 )
-texture = ExtResource( 13 )
+texture = ExtResource( 14 )
 region_rect = Rect2( 0, 0, 236, 44 )
 
 [node name="Bridge" type="Sprite" parent="Tiles/Bridge"]
-texture = ExtResource( 14 )
+texture = ExtResource( 15 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Tiles/Bridge"]
 visible = false
 position = Vector2( -2.75659, -68.9796 )
-shape = SubResource( 52 )
+shape = SubResource( 51 )
 
 [node name="Lvl_transition" type="Node2D" parent="."]
 
@@ -838,6 +835,6 @@ __meta__ = {
 }
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Lvl_transition/To_Forest"]
-shape = SubResource( 53 )
+shape = SubResource( 52 )
 
 [connection signal="body_entered" from="Lvl_transition/To_Forest" to="." method="_on_To_Forest_body_entered"]
