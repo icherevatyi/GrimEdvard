@@ -260,7 +260,7 @@ process_material = SubResource( 10 )
 
 [node name="Moon" type="Sprite" parent="Background/Clouds"]
 modulate = Color( 0.886275, 0.890196, 0.890196, 1 )
-position = Vector2( 1212, 90 )
+position = Vector2( 1212, 36.6667 )
 scale = Vector2( 0.2, 0.2 )
 z_index = -2
 z_as_relative = false
@@ -269,7 +269,7 @@ texture = ExtResource( 2 )
 [node name="Clouds" type="ParallaxLayer" parent="Background/Clouds"]
 editor/display_folded = true
 modulate = Color( 0.156863, 0.0745098, 0.235294, 1 )
-position = Vector2( 0, -13.3333 )
+position = Vector2( 0, -40 )
 motion_scale = Vector2( 0.2, 1 )
 motion_mirroring = Vector2( 1200, 0 )
 
@@ -308,12 +308,12 @@ texture = SubResource( 18 )
 [node name="Forest" type="ParallaxBackground" parent="Background"]
 
 [node name="Trees" type="ParallaxLayer" parent="Background/Forest"]
-position = Vector2( 358, 192 )
+position = Vector2( 358, 208 )
 motion_scale = Vector2( 0.6, 1 )
 motion_mirroring = Vector2( 561, 0 )
 
 [node name="Sprite" type="Sprite" parent="Background/Forest/Trees"]
-position = Vector2( 282, 0 )
+position = Vector2( 282, -21 )
 texture = ExtResource( 4 )
 region_enabled = true
 region_rect = Rect2( 0, 0, 561, 83 )
@@ -772,6 +772,7 @@ editor/display_folded = true
 color = Color( 0.364706, 0.372549, 0.396078, 1 )
 
 [node name="PlayerContainer" type="Node2D" parent="."]
+editor/display_folded = true
 
 [node name="PlayerSpawn" type="Position2D" parent="PlayerContainer"]
 position = Vector2( 240, 204.4 )
@@ -827,6 +828,7 @@ position = Vector2( -2.75659, -68.9796 )
 shape = SubResource( 51 )
 
 [node name="Lvl_transition" type="Node2D" parent="."]
+editor/display_folded = true
 
 [node name="To_Forest" type="Area2D" parent="Lvl_transition"]
 position = Vector2( 128, 178 )
