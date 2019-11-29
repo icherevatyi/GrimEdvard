@@ -52,7 +52,7 @@ func apply_movement():
 	if climb_collider.is_colliding():
 		if climb_collider.get_collider().get_parent().is_in_group("climable"):
 			if Input.is_action_just_pressed("ui_accept"):
-				position.x = climb_collider.get_collider().get_global_position().x + 4
+				position.x = climb_collider.get_collider().get_global_position().x
 				if position.y > 0:
 					position.y -= 10
 				else: 
