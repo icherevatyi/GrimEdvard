@@ -8,15 +8,16 @@
 
 [sub_resource type="AtlasTexture" id=1]
 atlas = ExtResource( 3 )
-region = Rect2( 0, 0, 300, 23 )
+region = Rect2( 0, 0, 340, 23 )
 
 [sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 6, 11 )
 
 [sub_resource type="Animation" id=3]
 resource_name = "climb"
-length = 0.4
+length = 0.6
 loop = true
+step = 0.15
 tracks/0/type = "value"
 tracks/0/path = NodePath("Sprite:frame")
 tracks/0/interp = 1
@@ -24,10 +25,10 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 0.2 ),
-"transitions": PoolRealArray( 1, 1 ),
+"times": PoolRealArray( 0, 0.15, 0.3, 0.45 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
 "update": 1,
-"values": [ 13, 14 ]
+"values": [ 13, 14, 15, 16 ]
 }
 
 [sub_resource type="Animation" id=4]
@@ -106,7 +107,7 @@ script = ExtResource( 2 )
 "turnable",
 ]]
 texture = SubResource( 1 )
-hframes = 15
+hframes = 17
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource( 2 )
