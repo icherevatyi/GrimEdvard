@@ -12,33 +12,36 @@ script = ExtResource( 1 )
 z_index = 1
 
 [node name="Control" type="Control" parent="Notification"]
-margin_right = 40.0
-margin_bottom = 40.0
+anchor_left = 1.0
+anchor_right = 1.0
+margin_left = -21.0
+margin_right = -4.0
+margin_bottom = 17.0
+rect_scale = Vector2( 0.6, 0.6 )
 theme = ExtResource( 2 )
+__meta__ = {
+"_edit_group_": true
+}
 
-[node name="ActionButtonNotifier" type="ColorRect" parent="Notification/Control"]
-margin_left = -16.0
-margin_right = -8.0
-margin_bottom = 10.0
-size_flags_horizontal = 2
-color = Color( 0.282353, 0.282353, 0.282353, 1 )
+[node name="ActionButtonNotifier" type="Panel" parent="Notification/Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
 
-[node name="ColorRect" type="ColorRect" parent="Notification/Control/ActionButtonNotifier"]
-margin_left = 1.0
-margin_top = 1.0
-margin_right = 7.0
-margin_bottom = 9.0
-color = Color( 0.160784, 0.160784, 0.160784, 1 )
-
-[node name="Label" type="Label" parent="Notification/Control/ActionButtonNotifier/ColorRect"]
-margin_left = 1.0
-margin_right = 7.0
-margin_bottom = 10.0
+[node name="Label" type="Label" parent="Notification/Control/ActionButtonNotifier"]
+modulate = Color( 0.196078, 0.235294, 0.223529, 1 )
+self_modulate = Color( 0.196078, 0.235294, 0.223529, 1 )
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -5.5
+margin_top = -7.5
+margin_right = 8.5
+margin_bottom = 7.5
 text = "E"
-
-[node name="Popup" type="Popup" parent="Notification/Control"]
-margin_right = 40.0
-margin_bottom = 40.0
+align = 1
+valign = 3
+max_lines_visible = 1
 
 [connection signal="body_entered" from="Trigger" to="." method="_on_Trigger_body_entered"]
 [connection signal="body_exited" from="Trigger" to="." method="_on_Trigger_body_exited"]

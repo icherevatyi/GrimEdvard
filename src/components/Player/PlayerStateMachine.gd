@@ -8,6 +8,7 @@ func _ready():
 	add_state("fall")
 	add_state("climb")
 	add_state("hang")
+	add_state("dead")
 	call_deferred("set_state", states.idle)
 
 func _input(event):
@@ -58,6 +59,8 @@ func _get_transition(delta):
 				return states.jump
 			elif parent.movement.y != 0 and parent.is_climbing == true:
 				return states.climb
+			if parent.is_dead == true:
+				return states.dead
 		states.climb:
 			if parent.is_on_floor() and parent.is_climbing == false:
 				return states.idle
@@ -91,6 +94,8 @@ func _enter_state(new_state, old_state):
 			parent.anim_player.play("climb")
 		states.hang:
 			parent.anim_player.stop()
+		states.dead:
+			LevelTransition._death_screen()
 	pass
 
 func _exit_state(old_state, new_state):

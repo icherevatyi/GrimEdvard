@@ -38,6 +38,7 @@ gdscript/warnings/enable=false
 
 window/size/width=768
 window/size/height=432
+window/dpi/allow_hidpi=true
 window/stretch/mode="2d"
 window/stretch/aspect="keep"
 
