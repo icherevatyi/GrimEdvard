@@ -23,11 +23,13 @@ func _input(event):
 
 func _on_NewGame_pressed():
 	pause_toggle()
+	DeathScreen.set_process(false)
 	Global.prevLvl = null
 	LevelTransition._load_lvl(null, menu_backdrop, Global.newGameLvl)
 
 func _on_Restart_pressed():
 	pause_toggle()
+	DeathScreen.set_process(false)
 	Global.prevLvl = null
 	LevelTransition._load_lvl(null, menu_backdrop, Global.currentLvl)
 
