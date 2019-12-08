@@ -67,20 +67,11 @@ extents = Vector2( 10, 50 )
 script = ExtResource( 1 )
 
 [node name="TempModels" type="Node" parent="."]
-editor/display_folded = true
 
 [node name="BackgroundGradient" type="Sprite" parent="TempModels"]
 position = Vector2( -528, 368 )
 rotation = -1.5708
 scale = Vector2( 0.365121, 2189.89 )
-z_index = -3
-texture = SubResource( 2 )
-centered = false
-
-[node name="BackgroundGradient2" type="Sprite" parent="TempModels"]
-position = Vector2( -527.89, 368 )
-rotation = -1.5708
-scale = Vector2( 0.472605, 2189.89 )
 z_index = -3
 texture = SubResource( 2 )
 centered = false

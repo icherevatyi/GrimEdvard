@@ -5,16 +5,13 @@ var menu_backdrop = Color(0, 0, 0, 0.4)
 
 
 func pause_toggle():
-	if Global.is_player_dead == false:
-		if get_tree().paused == false:
-			Backdrop._fade_in(null, menu_backdrop, 0.1)
-			$Control.visible = !$Control.visible
-		else: 
-			$Control.visible = !$Control.visible
-			Backdrop._fade_out(menu_backdrop, 0.1)
-		get_tree().paused = !get_tree().paused
-	else:
+	if get_tree().paused == false:
+		Backdrop._fade_in(null, menu_backdrop, 0.1)
 		$Control.visible = !$Control.visible
+	else: 
+		$Control.visible = !$Control.visible
+		Backdrop._fade_out(menu_backdrop, 0.1)
+	get_tree().paused = !get_tree().paused
 
 
 func _input(event):
