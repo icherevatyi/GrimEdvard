@@ -27,8 +27,10 @@ config/icon="res://icon.png"
 [autoload]
 
 Global="*res://src/components/Global/Global.gd"
-LevelTransition="*res://src/components/Global/LevelTransition/LevelTransition.tscn"
-PauseScreen="*res://src/components/Global/PauseScreen/PauseScreen.tscn"
+LevelTransition="*res://src/components/Global/Helpers/LevelTransition.gd"
+PauseScreen="*res://src/components/Global/Helpers/PauseScreen.tscn"
+DeathScreen="*res://src/components/Global/Helpers/DeathScreen.tscn"
+Backdrop="*res://src/components/Global/Helpers/Backdrop.tscn"
 
 [debug]
 

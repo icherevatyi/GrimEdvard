@@ -25,7 +25,7 @@ func _ready():
 
 func _on_To_next_body_entered(body):
 	if body.name == "Player":
-		LevelTransition._load_lvl(next_lvl, null)
+		LevelTransition._load_lvl(null, null, next_lvl)
 
 func _on_Area2D_body_entered(body):
 	if body.name == "Player":

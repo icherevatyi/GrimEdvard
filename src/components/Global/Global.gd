@@ -1,6 +1,7 @@
 extends Node
 
 onready var Player = preload("res://src/components/Player/Player.tscn")
+onready var is_player_dead = false
 
 onready var level_list = {
 	"Forest_start": "res://src/components/Levels/Forest/Forest.tscn",

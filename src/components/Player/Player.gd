@@ -34,7 +34,7 @@ func set_camera_limits():
 func check_living_status():
 	if position.y > $Camera.limit_bottom + 20:
 		is_dead = true
-		#get_tree().change_scene(Global.currentLvl)
+		Global.is_player_dead = true
 
 func apply_gravity(delta):
 	if is_climbing == false:

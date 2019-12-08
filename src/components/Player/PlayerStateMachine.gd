@@ -95,7 +95,7 @@ func _enter_state(new_state, old_state):
 		states.hang:
 			parent.anim_player.stop()
 		states.dead:
-			LevelTransition._death_screen()
+			DeathScreen.show_deathscreen()
 	pass
 
 func _exit_state(old_state, new_state):

@@ -18,4 +18,4 @@ func _ready():
 
 func _on_To_Forest_body_entered(body):
 	if body.name == "Player":
-		LevelTransition._load_lvl(Global.level_list.Forest_start, null)
+		LevelTransition._load_lvl(null, null, Global.level_list.Forest_start)
