@@ -16,7 +16,6 @@ var vertical_direction = 0
 var move_speed := 5 * 32
 var gravity := 20
 var jump_height := -370
-
 onready var anim_player = $AnimationPlayer
 onready var climb_collider = $ActionChecker
 onready var currentLevel = get_node("/root/World")
@@ -34,7 +33,8 @@ func set_camera_limits():
 	
 func check_living_status():
 	if position.y > $Camera.limit_bottom + 20:
-		get_tree().change_scene(Global.currentLvl)
+		is_dead = true
+		Global.is_player_dead = true
 
 func apply_gravity(delta):
 	if is_climbing == false:
@@ -52,7 +52,7 @@ func apply_movement():
 	if climb_collider.is_colliding():
 		if climb_collider.get_collider().get_parent().is_in_group("climable"):
 			if Input.is_action_just_pressed("ui_accept"):
-				position.x = climb_collider.get_collider().get_global_position().x + 4
+				position.x = climb_collider.get_collider().get_global_position().x
 				if position.y > 0:
 					position.y -= 10
 				else: 
