@@ -15,6 +15,7 @@
 [ext_resource path="res://src/components/Levels/Brownville/Tiles/Street.tres" type="TileSet" id=13]
 [ext_resource path="res://src/assets/img/GroundElements/Forest_lvl/forest_river.png" type="Texture" id=14]
 [ext_resource path="res://src/assets/img/GroundElements/bridge.png" type="Texture" id=15]
+[ext_resource path="res://src/components/Global/Helpers/ChangeScene.tscn" type="PackedScene" id=16]
 
 [sub_resource type="Gradient" id=1]
 colors = PoolColorArray( 0.300781, 1, 0.91806, 1, 1, 1, 1, 1 )
@@ -229,9 +230,6 @@ extents = Vector2( 10, 7 )
 
 [sub_resource type="RectangleShape2D" id=51]
 extents = Vector2( 171.064, 18.993 )
-
-[sub_resource type="RectangleShape2D" id=52]
-extents = Vector2( 10, 50 )
 
 [node name="World" type="Node2D"]
 script = ExtResource( 1 )
@@ -828,15 +826,6 @@ position = Vector2( -2.75659, -68.9796 )
 shape = SubResource( 51 )
 
 [node name="Lvl_transition" type="Node2D" parent="."]
-editor/display_folded = true
 
-[node name="To_Forest" type="Area2D" parent="Lvl_transition"]
-position = Vector2( 128, 178 )
-__meta__ = {
-"_edit_group_": true
-}
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Lvl_transition/To_Forest"]
-shape = SubResource( 52 )
-
+[node name="To_Forest" parent="Lvl_transition" instance=ExtResource( 16 )]
 [connection signal="body_entered" from="Lvl_transition/To_Forest" to="." method="_on_To_Forest_body_entered"]

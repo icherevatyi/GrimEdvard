@@ -11,14 +11,14 @@ var color_black_transparent = Color(0, 0, 0, 0.6)
 
 func _fade_in(color_from, color_faded, delay):
 	check_color(color_from, color_faded)
-	tween.interpolate_property(colorRect, "color", starting_color, ending_color, delay, Tween.TRANS_LINEAR, Tween.EASE_OUT)
+	tween.interpolate_property(colorRect, "color", starting_color, ending_color, delay, Tween.TRANS_LINEAR, Tween.EASE_OUT_IN)
 	tween.start()
 	yield(tween, "tween_completed")
 
 
 func _fade_out(color_faded, delay):
 	check_color(null, color_faded)
-	tween.interpolate_property(colorRect, "color", ending_color, color_transparent, delay, Tween.TRANS_LINEAR, Tween.EASE_OUT)
+	tween.interpolate_property(colorRect, "color", ending_color, color_transparent, delay, Tween.TRANS_LINEAR, Tween.EASE_OUT_IN)
 	tween.start()
 	yield(tween, "tween_completed")
 

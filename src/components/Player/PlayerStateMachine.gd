@@ -21,6 +21,7 @@ func _input(event):
 
 func _state_logic(delta):
 	parent.check_living_status()
+	parent.check_if_grounded()
 	parent.handle_move_input()
 	parent.apply_gravity(delta)
 	parent.apply_movement()
@@ -28,17 +29,17 @@ func _state_logic(delta):
 func _get_transition(delta):
 	match state:
 		states.idle:
-			if !parent.is_on_floor():
+			if !parent.is_grounded:
 				if parent.movement.y < 0:
 					return states.jump
-				elif parent.movement.y > 0:
+				elif parent.movement.y > 0 and parent.is_grounded == false:
 					return states.fall
 			elif parent.movement.x != 0:
 				return states.run
-			if parent.is_on_floor() and parent.is_climbing == true:
+			if parent.is_grounded and parent.is_climbing == true:
 				return states.climb
 		states.run:
-			if !parent.is_on_floor():
+			if !parent.is_grounded:
 				if parent.movement.y < 0:
 					return states.jump
 				elif parent.movement.y > 0:
@@ -46,14 +47,14 @@ func _get_transition(delta):
 			elif parent.movement.x == 0:
 				return states.idle
 		states.jump:
-			if parent.is_on_floor():
+			if parent.is_grounded:
 				return states.idle
 			elif parent.movement.y >= 0 and parent.is_climbing == false:
 				return states.fall
 			elif parent.movement.y != 0 and parent.is_climbing == true:
 				return states.climb
 		states.fall:
-			if parent.is_on_floor():
+			if parent.is_grounded:
 				return states.idle
 			elif parent.movement.y < 0 and parent.is_climbing == false:
 				return states.jump
@@ -62,7 +63,7 @@ func _get_transition(delta):
 			if parent.is_dead == true:
 				return states.dead
 		states.climb:
-			if parent.is_on_floor() and parent.is_climbing == false:
+			if parent.is_grounded and parent.is_climbing == false:
 				return states.idle
 			elif parent.movement.y < 0 and parent.is_climbing == false:
 				return states.jump
@@ -71,7 +72,7 @@ func _get_transition(delta):
 			elif parent.movement.y == 0 and parent.is_climbing == true:
 				return states.hang
 		states.hang:
-			if parent.is_on_floor() and parent.is_climbing == false:
+			if parent.is_grounded and parent.is_climbing == false:
 				return states.idle
 			if parent.movement.y != 0 and parent.is_climbing == true:
 				return states.climb

@@ -6,8 +6,8 @@ signal change_water_state()
 var limits = {
 	"top": -370,
 	"bottom": 208,
-	"left": -256,
-	"right": 1536
+	"left": 0,
+	"right": 3636
 }
 
 
@@ -25,7 +25,7 @@ func _ready():
 
 func _on_To_next_body_entered(body):
 	if body.name == "Player":
-		LevelTransition._load_lvl(null, null, next_lvl)
+		LevelTransition._load_lvl(null, null, Global.level_list.Brownville)
 
 func _on_Area2D_body_entered(body):
 	if body.name == "Player":

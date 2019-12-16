@@ -10,6 +10,7 @@ var is_climbing := false
 var is_night_time := false
 
 const UP = Vector2(0, -1)
+const SLOPE_STOP = 64
 var movement = Vector2(0,0)
 var move_direction = 0
 var vertical_direction = 0
@@ -19,6 +20,7 @@ var jump_height := -370
 onready var anim_player = $AnimationPlayer
 onready var climb_collider = $ActionChecker
 onready var currentLevel = get_node("/root/World")
+onready var is_grounded_notifiers = $Grounded_notifiers
 
 signal grounded_updated(is_grounded)
 
@@ -36,6 +38,13 @@ func check_living_status():
 		is_dead = true
 		Global.is_player_dead = true
 
+func check_if_grounded():
+	for notifier in is_grounded_notifiers.get_children():
+		if notifier.is_colliding():
+			return true
+		else: 
+			return false
+
 func apply_gravity(delta):
 	if is_climbing == false:
 		movement.y += gravity
@@ -43,9 +52,9 @@ func apply_gravity(delta):
 		set_collision_mask_bit(1, true)
 
 func apply_movement():
-	movement = move_and_slide(movement, UP)
+	movement = move_and_slide(movement, UP, true)
+	is_grounded = check_if_grounded()
 	var was_grounded = is_grounded
-	is_grounded = is_on_floor()
 	if was_grounded == null || is_grounded != was_grounded:
 		emit_signal("grounded_updated", is_grounded)
 
