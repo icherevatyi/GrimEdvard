@@ -22,6 +22,8 @@ onready var climb_collider = $ActionChecker
 onready var currentLevel = get_node("/root/World")
 onready var is_grounded_notifiers = $Grounded_notifiers
 
+export(int) var attack_combo_counter = 0
+
 signal grounded_updated(is_grounded)
 
 func _ready():
@@ -67,6 +69,18 @@ func apply_movement():
 	else: 
 		is_climbing = false
 
+func _input(event):
+	if event.is_action_pressed("ui_attack"):
+		if attack_combo_counter == 0:
+			anim_player.play("attack_1")
+			attack_combo_counter += 1
+		elif attack_combo_counter == 1:
+			anim_player.play("attack_2")
+			attack_combo_counter += 1
+		elif attack_combo_counter == 2:
+			anim_player.play("attack_3")
+			attack_combo_counter = 0
+		
 func handle_move_input():
 	if is_climbing == false:
 		move_direction = - int(Input.is_action_pressed("ui_left")) + int(Input.is_action_pressed("ui_right"))
