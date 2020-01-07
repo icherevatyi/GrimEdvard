@@ -6,7 +6,7 @@ var limits = {
 	"top": -370,
 	"bottom": 288,
 	"left": 0,
-	"right": 2880
+	"right": 2480
 }
 
 func _ready():

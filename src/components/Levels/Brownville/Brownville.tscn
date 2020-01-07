@@ -1,4 +1,4 @@
-[gd_scene load_steps=68 format=2]
+[gd_scene load_steps=69 format=2]
 
 [ext_resource path="res://src/components/Levels/Brownville/Brownville.gd" type="Script" id=1]
 [ext_resource path="res://src/assets/img/Background/NightForest/moon_lg.png" type="Texture" id=2]
@@ -178,10 +178,6 @@ region = Rect2( 272, 69, 177, 92 )
 atlas = ExtResource( 8 )
 region = Rect2( 31, 212, 38, 21 )
 
-[sub_resource type="AtlasTexture" id=38]
-atlas = ExtResource( 8 )
-region = Rect2( 99, 166, 29, 65 )
-
 [sub_resource type="AtlasTexture" id=39]
 atlas = ExtResource( 8 )
 region = Rect2( 164, 166, 39, 65 )
@@ -195,40 +191,48 @@ atlas = ExtResource( 8 )
 region = Rect2( 130, 166, 29, 66 )
 
 [sub_resource type="AtlasTexture" id=42]
-atlas = ExtResource( 11 )
-region = Rect2( 0, 2, 25, 14 )
+atlas = ExtResource( 8 )
+region = Rect2( 537, 165, 274, 148 )
 
 [sub_resource type="AtlasTexture" id=43]
 atlas = ExtResource( 11 )
-region = Rect2( 29, 2, 25, 14 )
+region = Rect2( 0, 2, 25, 14 )
 
 [sub_resource type="AtlasTexture" id=44]
 atlas = ExtResource( 11 )
-region = Rect2( 58, 2, 24, 14 )
+region = Rect2( 29, 2, 25, 14 )
 
 [sub_resource type="AtlasTexture" id=45]
 atlas = ExtResource( 11 )
-region = Rect2( 85, 3, 19, 15 )
+region = Rect2( 58, 2, 24, 14 )
 
 [sub_resource type="AtlasTexture" id=46]
 atlas = ExtResource( 11 )
-region = Rect2( 165, 2, 24, 14 )
+region = Rect2( 85, 3, 19, 15 )
 
 [sub_resource type="AtlasTexture" id=47]
 atlas = ExtResource( 11 )
+region = Rect2( 165, 2, 24, 14 )
+
+[sub_resource type="AtlasTexture" id=48]
+atlas = ExtResource( 11 )
 region = Rect2( 193, 0, 43, 16 )
 
-[sub_resource type="RectangleShape2D" id=48]
+[sub_resource type="RectangleShape2D" id=49]
 extents = Vector2( 22, 8 )
 
-[sub_resource type="AtlasTexture" id=49]
-atlas = ExtResource( 11 )
-region = Rect2( 0, 18, 20, 14 )
+[sub_resource type="AtlasTexture" id=53]
+atlas = ExtResource( 8 )
+region = Rect2( 240, 187, 79, 37 )
 
-[sub_resource type="RectangleShape2D" id=50]
-extents = Vector2( 10, 7 )
+[sub_resource type="RectangleShape2D" id=54]
+extents = Vector2( 40, 20 )
 
-[sub_resource type="RectangleShape2D" id=51]
+[sub_resource type="AtlasTexture" id=38]
+atlas = ExtResource( 8 )
+region = Rect2( 99, 166, 29, 65 )
+
+[sub_resource type="RectangleShape2D" id=52]
 extents = Vector2( 171.064, 18.993 )
 
 [node name="World" type="Node2D"]
@@ -237,6 +241,7 @@ script = ExtResource( 1 )
 [node name="Background" type="Node2D" parent="."]
 
 [node name="Clouds" type="ParallaxBackground" parent="Background"]
+editor/display_folded = true
 offset = Vector2( 0, 70 )
 scale = Vector2( 0.6, 0.6 )
 transform = Transform2D( 0.6, 0, 0, 0.6, 0, 70 )
@@ -304,6 +309,7 @@ position = Vector2( 1148.67, 112.567 )
 texture = SubResource( 18 )
 
 [node name="Forest" type="ParallaxBackground" parent="Background"]
+editor/display_folded = true
 
 [node name="Trees" type="ParallaxLayer" parent="Background/Forest"]
 position = Vector2( 358, 208 )
@@ -338,15 +344,14 @@ texture = SubResource( 20 )
 centered = false
 
 [node name="Buidings" type="Node2D" parent="."]
-editor/display_folded = true
 position = Vector2( 1644, 35 )
 scale = Vector2( 0.7, 0.7 )
 
 [node name="Back_Street" type="Sprite" parent="Buidings"]
-position = Vector2( 725.143, 276 )
+position = Vector2( 839.429, 276 )
 texture = ExtResource( 7 )
 region_enabled = true
-region_rect = Rect2( 0, 0, 384, 48 )
+region_rect = Rect2( 0, 0, 750, 48 )
 
 [node name="Back_fence" type="Sprite" parent="Buidings"]
 position = Vector2( 17.7144, 263.429 )
@@ -431,6 +436,10 @@ texture = SubResource( 27 )
 position = Vector2( 93.4287, 227 )
 texture = SubResource( 24 )
 
+[node name="Building7" type="Sprite" parent="Buidings"]
+position = Vector2( 1259.14, 227 )
+texture = SubResource( 24 )
+
 [node name="Barrel_type_d4" type="Sprite" parent="Buidings"]
 position = Vector2( 160.001, 270 )
 texture = SubResource( 25 )
@@ -442,6 +451,17 @@ texture = SubResource( 27 )
 [node name="Building5" type="Sprite" parent="Buidings"]
 position = Vector2( 266.428, 221 )
 texture = SubResource( 26 )
+
+[node name="Barrel_type_c3" type="Sprite" parent="Buidings"]
+position = Vector2( 930.714, 246.286 )
+scale = Vector2( 1, 1 )
+texture = SubResource( 22 )
+
+[node name="Barrel_type_a4" type="Sprite" parent="Buidings"]
+position = Vector2( 928.571, 250 )
+scale = Vector2( 1, 1 )
+texture = SubResource( 23 )
+region_rect = Rect2( 2, 195, 13, 16 )
 
 [node name="Tavern_set" type="Node2D" parent="Buidings"]
 editor/display_folded = true
@@ -494,131 +514,6 @@ position = Vector2( 361.214, 271 )
 scale = Vector2( 0.5, 0.5 )
 texture = SubResource( 37 )
 
-[node name="City-lanterns" type="Node2D" parent="Buidings"]
-editor/display_folded = true
-
-[node name="City_lantern" type="Sprite" parent="Buidings/City-lanterns"]
-position = Vector2( -1.14355, 244 )
-texture = SubResource( 38 )
-region_rect = Rect2( 99, 166, 29, 65 )
-
-[node name="City_lantern2" type="Sprite" parent="Buidings/City-lanterns"]
-position = Vector2( 343.428, 244 )
-texture = SubResource( 38 )
-region_rect = Rect2( 99, 166, 29, 65 )
-
-[node name="City_lantern4" type="Sprite" parent="Buidings/City-lanterns"]
-position = Vector2( 713.428, 244 )
-texture = SubResource( 38 )
-region_rect = Rect2( 99, 166, 29, 65 )
-
-[node name="City_lantern3" type="Sprite" parent="Buidings/City-lanterns"]
-position = Vector2( -355.857, 244 )
-texture = SubResource( 38 )
-region_rect = Rect2( 99, 166, 29, 65 )
-
-[node name="Light" type="Node2D" parent="Buidings/City-lanterns"]
-editor/display_folded = true
-
-[node name="Light2D" type="Light2D" parent="Buidings/City-lanterns/Light"]
-modulate = Color( 1, 1, 1, 0 )
-position = Vector2( -347.143, 230.716 )
-scale = Vector2( 0.285714, 0.285714 )
-texture = ExtResource( 10 )
-color = Color( 0.956863, 0.976471, 0.729412, 1 )
-energy = 1.3
-shadow_enabled = true
-
-[node name="Light2D2" type="Light2D" parent="Buidings/City-lanterns/Light"]
-modulate = Color( 1, 1, 1, 0 )
-position = Vector2( 7.14282, 230.716 )
-scale = Vector2( 0.285714, 0.285714 )
-texture = ExtResource( 10 )
-color = Color( 0.956863, 0.976471, 0.729412, 1 )
-energy = 1.3
-shadow_enabled = true
-
-[node name="Light2D3" type="Light2D" parent="Buidings/City-lanterns/Light"]
-modulate = Color( 1, 1, 1, 0 )
-position = Vector2( 351.714, 230.716 )
-scale = Vector2( 0.285714, 0.285714 )
-texture = ExtResource( 10 )
-color = Color( 0.972549, 1, 0.631373, 1 )
-energy = 1.3
-shadow_enabled = true
-
-[node name="Light2D4" type="Light2D" parent="Buidings/City-lanterns/Light"]
-modulate = Color( 1, 1, 1, 0 )
-position = Vector2( 453.143, 246.43 )
-scale = Vector2( 0.142857, 0.142857 )
-texture = ExtResource( 10 )
-color = Color( 0.972549, 1, 0.631373, 1 )
-energy = 1.2
-shadow_enabled = true
-
-[node name="Light2D5" type="Light2D" parent="Buidings/City-lanterns/Light"]
-modulate = Color( 1, 1, 1, 0 )
-position = Vector2( 722.857, 230.716 )
-scale = Vector2( 0.285714, 0.285714 )
-texture = ExtResource( 10 )
-color = Color( 0.956863, 0.976471, 0.729412, 1 )
-energy = 1.3
-shadow_enabled = true
-
-[node name="Light2D6" type="Light2D" parent="Buidings/City-lanterns/Light"]
-modulate = Color( 1, 1, 1, 0 )
-position = Vector2( 608.571, 222.145 )
-scale = Vector2( 0.1, 0.1 )
-texture = ExtResource( 10 )
-color = Color( 0.956863, 0.976471, 0.729412, 1 )
-energy = 1.1
-shadow_enabled = true
-
-[node name="Light2D7" type="Light2D" parent="Buidings/City-lanterns/Light"]
-modulate = Color( 1, 1, 1, 0 )
-position = Vector2( 759.992, 222.145 )
-scale = Vector2( 0.1, 0.1 )
-texture = ExtResource( 10 )
-color = Color( 0.956863, 0.976471, 0.729412, 1 )
-energy = 1.1
-shadow_enabled = true
-
-[node name="Light2D8" type="Light2D" parent="Buidings/City-lanterns/Light"]
-modulate = Color( 1, 1, 1, 0 )
-position = Vector2( 262.836, 200.716 )
-scale = Vector2( 0.1, 0.1 )
-texture = ExtResource( 10 )
-color = Color( 0.956863, 0.976471, 0.729412, 1 )
-energy = 1.1
-shadow_enabled = true
-
-[node name="Light2D9" type="Light2D" parent="Buidings/City-lanterns/Light"]
-modulate = Color( 1, 1, 1, 0 )
-position = Vector2( 104.262, 246.43 )
-scale = Vector2( 0.1, 0.1 )
-texture = ExtResource( 10 )
-color = Color( 0.956863, 0.976471, 0.729412, 1 )
-energy = 1.1
-shadow_enabled = true
-
-[node name="Light2D10" type="Light2D" parent="Buidings/City-lanterns/Light"]
-modulate = Color( 1, 1, 1, 0 )
-position = Vector2( -238.598, 246.43 )
-scale = Vector2( 0.1, 0.1 )
-texture = ExtResource( 10 )
-color = Color( 0.956863, 0.976471, 0.729412, 1 )
-energy = 1.1
-shadow_enabled = true
-
-[node name="Light2D11" type="Light2D" parent="Buidings/City-lanterns/Light"]
-modulate = Color( 1, 1, 1, 0 )
-position = Vector2( -257.172, 203.573 )
-scale = Vector2( 0.1, 0.1 )
-texture = ExtResource( 10 )
-color = Color( 0.956863, 0.976471, 0.729412, 1 )
-energy = 1.1
-shadow_enabled = true
-
 [node name="Boxes2" type="Sprite" parent="Buidings"]
 position = Vector2( -3.71411, 271.429 )
 scale = Vector2( 0.5, 0.5 )
@@ -636,7 +531,6 @@ texture = SubResource( 23 )
 region_rect = Rect2( 2, 195, 13, 16 )
 
 [node name="Forest_lanterns" type="Node2D" parent="Buidings"]
-editor/display_folded = true
 
 [node name="Lantern" type="Sprite" parent="Buidings/Forest_lanterns"]
 position = Vector2( -1402.86, 244.857 )
@@ -695,8 +589,11 @@ texture = ExtResource( 10 )
 energy = 1.2
 shadow_enabled = true
 
+[node name="Building6" type="Sprite" parent="Buidings"]
+position = Vector2( 1057.14, 201.429 )
+texture = SubResource( 42 )
+
 [node name="RoadElements" type="Node2D" parent="."]
-editor/display_folded = true
 position = Vector2( 688, 192 )
 __meta__ = {
 "_edit_group_": true
@@ -704,35 +601,35 @@ __meta__ = {
 
 [node name="Fence1" type="Sprite" parent="RoadElements"]
 position = Vector2( 75, 29 )
-texture = SubResource( 42 )
+texture = SubResource( 43 )
 
 [node name="Fence2" type="Sprite" parent="RoadElements"]
 position = Vector2( 166, 29 )
-texture = SubResource( 43 )
+texture = SubResource( 44 )
 
 [node name="Fence8" type="Sprite" parent="RoadElements"]
 position = Vector2( 11, 29 )
-texture = SubResource( 43 )
+texture = SubResource( 44 )
 
 [node name="Fence3" type="Sprite" parent="RoadElements"]
 position = Vector2( 133, 29 )
-texture = SubResource( 44 )
+texture = SubResource( 45 )
 
 [node name="Fence7" type="Sprite" parent="RoadElements"]
 position = Vector2( 42, 29 )
-texture = SubResource( 44 )
+texture = SubResource( 45 )
 
 [node name="Fence4" type="Sprite" parent="RoadElements"]
 position = Vector2( 104, 31 )
-texture = SubResource( 45 )
+texture = SubResource( 46 )
 
 [node name="Fence5" type="Sprite" parent="RoadElements"]
 position = Vector2( 226, 29 )
-texture = SubResource( 46 )
+texture = SubResource( 47 )
 
 [node name="Fence6" type="Sprite" parent="RoadElements"]
 position = Vector2( 194, 29 )
-texture = SubResource( 46 )
+texture = SubResource( 47 )
 
 [node name="CitySign" type="Area2D" parent="RoadElements"]
 editor/display_folded = true
@@ -742,26 +639,170 @@ __meta__ = {
 }
 
 [node name="Sprite" type="Sprite" parent="RoadElements/CitySign"]
-texture = SubResource( 47 )
+texture = SubResource( 48 )
 region_rect = Rect2( 193, 0, 43, 16 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RoadElements/CitySign"]
-shape = SubResource( 48 )
+shape = SubResource( 49 )
 
-[node name="TreeTrunk" type="StaticBody2D" parent="RoadElements"]
-position = Vector2( -80, 33 )
-z_index = 2
-collision_layer = 0
-collision_mask = 0
+[node name="StaticBody2D" type="StaticBody2D" parent="RoadElements"]
+position = Vector2( 1789, 20 )
+collision_layer = 2
 __meta__ = {
 "_edit_group_": true
 }
 
-[node name="Sprite" type="Sprite" parent="RoadElements/TreeTrunk"]
-texture = SubResource( 49 )
+[node name="Sprite" type="Sprite" parent="RoadElements/StaticBody2D"]
+texture = SubResource( 53 )
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="RoadElements/TreeTrunk"]
-shape = SubResource( 50 )
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RoadElements/StaticBody2D"]
+shape = SubResource( 54 )
+
+[node name="City-lanterns" type="Node2D" parent="."]
+editor/display_folded = true
+position = Vector2( 1644, 35 )
+scale = Vector2( 0.7, 0.7 )
+z_index = 3
+
+[node name="City_lantern" type="Sprite" parent="City-lanterns"]
+position = Vector2( -1.14355, 244 )
+z_index = 1
+texture = SubResource( 38 )
+region_rect = Rect2( 99, 166, 29, 65 )
+
+[node name="City_lantern2" type="Sprite" parent="City-lanterns"]
+position = Vector2( 343.428, 244 )
+z_index = 1
+texture = SubResource( 38 )
+region_rect = Rect2( 99, 166, 29, 65 )
+
+[node name="City_lantern4" type="Sprite" parent="City-lanterns"]
+position = Vector2( 713.428, 244 )
+z_index = 1
+texture = SubResource( 38 )
+region_rect = Rect2( 99, 166, 29, 65 )
+
+[node name="City_lantern3" type="Sprite" parent="City-lanterns"]
+position = Vector2( -355.857, 244 )
+z_index = 1
+texture = SubResource( 38 )
+region_rect = Rect2( 99, 166, 29, 65 )
+
+[node name="City_lantern5" type="Sprite" parent="City-lanterns"]
+position = Vector2( 1175.57, 244 )
+z_index = 1
+texture = SubResource( 38 )
+region_rect = Rect2( 99, 166, 29, 65 )
+
+[node name="Light" type="Node2D" parent="City-lanterns"]
+
+[node name="Light2D" type="Light2D" parent="City-lanterns/Light"]
+modulate = Color( 1, 1, 1, 0 )
+position = Vector2( -347.143, 230.716 )
+scale = Vector2( 0.285714, 0.285714 )
+texture = ExtResource( 10 )
+color = Color( 0.956863, 0.976471, 0.729412, 1 )
+energy = 1.3
+shadow_enabled = true
+
+[node name="Light2D2" type="Light2D" parent="City-lanterns/Light"]
+modulate = Color( 1, 1, 1, 0 )
+position = Vector2( 7.14282, 230.716 )
+scale = Vector2( 0.285714, 0.285714 )
+texture = ExtResource( 10 )
+color = Color( 0.956863, 0.976471, 0.729412, 1 )
+energy = 1.3
+shadow_enabled = true
+
+[node name="Light2D3" type="Light2D" parent="City-lanterns/Light"]
+modulate = Color( 1, 1, 1, 0 )
+position = Vector2( 351.714, 230.716 )
+scale = Vector2( 0.285714, 0.285714 )
+texture = ExtResource( 10 )
+color = Color( 0.972549, 1, 0.631373, 1 )
+energy = 1.3
+shadow_enabled = true
+
+[node name="Light2D12" type="Light2D" parent="City-lanterns/Light"]
+modulate = Color( 1, 1, 1, 0 )
+position = Vector2( 1203.14, 230.716 )
+scale = Vector2( 0.285714, 0.285714 )
+texture = ExtResource( 10 )
+color = Color( 0.972549, 1, 0.631373, 1 )
+energy = 1.3
+shadow_enabled = true
+
+[node name="Light2D4" type="Light2D" parent="City-lanterns/Light"]
+modulate = Color( 1, 1, 1, 0 )
+position = Vector2( 453.143, 246.43 )
+scale = Vector2( 0.142857, 0.142857 )
+texture = ExtResource( 10 )
+color = Color( 0.972549, 1, 0.631373, 1 )
+energy = 1.2
+shadow_enabled = true
+
+[node name="Light2D5" type="Light2D" parent="City-lanterns/Light"]
+modulate = Color( 1, 1, 1, 0 )
+position = Vector2( 722.857, 230.716 )
+scale = Vector2( 0.285714, 0.285714 )
+texture = ExtResource( 10 )
+color = Color( 0.956863, 0.976471, 0.729412, 1 )
+energy = 1.3
+shadow_enabled = true
+
+[node name="Light2D6" type="Light2D" parent="City-lanterns/Light"]
+modulate = Color( 1, 1, 1, 0 )
+position = Vector2( 608.571, 222.145 )
+scale = Vector2( 0.1, 0.1 )
+texture = ExtResource( 10 )
+color = Color( 0.956863, 0.976471, 0.729412, 1 )
+energy = 1.1
+shadow_enabled = true
+
+[node name="Light2D7" type="Light2D" parent="City-lanterns/Light"]
+modulate = Color( 1, 1, 1, 0 )
+position = Vector2( 759.992, 222.145 )
+scale = Vector2( 0.1, 0.1 )
+texture = ExtResource( 10 )
+color = Color( 0.956863, 0.976471, 0.729412, 1 )
+energy = 1.1
+shadow_enabled = true
+
+[node name="Light2D8" type="Light2D" parent="City-lanterns/Light"]
+modulate = Color( 1, 1, 1, 0 )
+position = Vector2( 262.836, 200.716 )
+scale = Vector2( 0.1, 0.1 )
+texture = ExtResource( 10 )
+color = Color( 0.956863, 0.976471, 0.729412, 1 )
+energy = 1.1
+shadow_enabled = true
+
+[node name="Light2D9" type="Light2D" parent="City-lanterns/Light"]
+modulate = Color( 1, 1, 1, 0 )
+position = Vector2( 104.262, 246.43 )
+scale = Vector2( 0.1, 0.1 )
+texture = ExtResource( 10 )
+color = Color( 0.956863, 0.976471, 0.729412, 1 )
+energy = 1.1
+shadow_enabled = true
+
+[node name="Light2D10" type="Light2D" parent="City-lanterns/Light"]
+modulate = Color( 1, 1, 1, 0 )
+position = Vector2( -238.598, 246.43 )
+scale = Vector2( 0.1, 0.1 )
+texture = ExtResource( 10 )
+color = Color( 0.956863, 0.976471, 0.729412, 1 )
+energy = 1.1
+shadow_enabled = true
+
+[node name="Light2D11" type="Light2D" parent="City-lanterns/Light"]
+modulate = Color( 1, 1, 1, 0 )
+position = Vector2( -257.172, 203.573 )
+scale = Vector2( 0.1, 0.1 )
+texture = ExtResource( 10 )
+color = Color( 0.956863, 0.976471, 0.729412, 1 )
+energy = 1.1
+shadow_enabled = true
 
 [node name="ColorPaletteFix" type="Node2D" parent="."]
 editor/display_folded = true
@@ -823,7 +864,7 @@ texture = ExtResource( 15 )
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Tiles/Bridge"]
 visible = false
 position = Vector2( -2.75659, -68.9796 )
-shape = SubResource( 51 )
+shape = SubResource( 52 )
 
 [node name="Lvl_transition" type="Node2D" parent="."]
 
