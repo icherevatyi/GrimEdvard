@@ -22,6 +22,10 @@ onready var climb_collider = $ActionChecker
 onready var currentLevel = get_node("/root/World")
 onready var is_grounded_notifiers = $Grounded_notifiers
 
+
+# Holsted weapon checker
+var holsted = true
+
 export(int) var attack_combo_counter = 0
 
 signal grounded_updated(is_grounded)
@@ -53,6 +57,20 @@ func apply_gravity(delta):
 		movement.y = min(movement.y, 1000)
 		set_collision_mask_bit(1, true)
 
+func check_weapon(delta):
+	match holsted:
+		false: 
+			$Weapons.visible = true
+			$Bare_hands.visible = false
+		true:
+			$Weapons.visible = false
+			$Bare_hands.visible = true
+			
+	if is_climbing == true:
+		holsted = true
+	else:
+		holsted = false
+
 func apply_movement():
 	movement = move_and_slide(movement, UP, true)
 	is_grounded = check_if_grounded()
@@ -71,6 +89,7 @@ func apply_movement():
 
 func _input(event):
 	if event.is_action_pressed("ui_attack"):
+		holsted = false
 		if attack_combo_counter == 0:
 			anim_player.play("attack_1")
 			attack_combo_counter += 1

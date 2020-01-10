@@ -25,6 +25,7 @@ func _state_logic(delta):
 	parent.handle_move_input()
 	parent.apply_gravity(delta)
 	parent.apply_movement()
+	parent.check_weapon(delta)
 
 func _get_transition(delta):
 	match state:
