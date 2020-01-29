@@ -1,0 +1,66 @@
+{
+  "1h_sword": {
+    "ItemType": "1h_sword",
+    "ItemName": "Steel Sword",
+    "ItemDamage": 25,
+    "ItemDefence": 5,
+    "ItemPrice": 50,
+    "ItemRef": "1h_steelSw",
+    "EquipSlot": "Weapon",
+    "Icon": "res://src/assets/img/HUD/Inventory/Icons/1h_steel_sword_inv_icon.png"
+  },
+  "scrap": {
+    "ItemType": "scrap",
+    "ItemName": "Steel Scrap",
+    "ItemDamage": 0,
+    "ItemDefence": 0,
+    "ItemPrice": 20,
+    "ItemRef": "steelScrap",
+    "EquipSlot": "none"
+  },
+  "brokenParts": {
+    "ItemType": "brokenParts",
+    "ItemName": "Broken Steel Sword",
+    "ItemDamage": 0,
+    "ItemDefence": 0,
+    "ItemPrice": 30,
+    "ItemRef": "bSteelSword",
+    "EquipSlot": "Weapon"
+  },
+  "recipes": {
+    "ItemType": "recipes",
+    "ItemName": "Iron Sword Recipe",
+    "ItemDamage": 0,
+    "ItemDefence": 0,
+    "ItemPrice": 80,
+    "ItemRef": "recipe_ironSw",
+    "EquipSlot": "none"
+  },
+  "gold": {
+    "ItemType": "gold",
+    "ItemName": "Gold",
+    "ItemDamage": 0,
+    "ItemDefence": 0,
+    "ItemPrice": 1,
+    "ItemRef": "gold",
+    "EquipSlot": "none"
+  },
+  "souls": {
+    "ItemType": "souls",
+    "ItemName": "Souls",
+    "ItemDamage": 0,
+    "ItemDefence": 0,
+    "ItemPrice": 0,
+    "ItemRef": "souls",
+    "EquipSlot": "none"
+  },
+  "exp": {
+    "ItemType": "exp",
+    "ItemName": "Experience",
+    "ItemDamage": 0,
+    "ItemDefence": 0,
+    "ItemPrice": 0,
+    "ItemRef": "exp",
+    "EquipSlot": "none"
+  }
+}

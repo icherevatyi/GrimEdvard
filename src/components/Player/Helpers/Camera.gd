@@ -10,9 +10,11 @@ onready var prev_camera_pos = get_camera_position()
 onready var tween = $Tween
 
 var facing = 0
+signal outside_camera()
 
 func _process(delta):
 	_check_facing()
+	check_player_presence()
 	prev_camera_pos = get_camera_position()
 
 func _check_facing():
@@ -26,3 +28,7 @@ func _check_facing():
 func _on_Player_grounded_updated(is_grounded):
 	drag_margin_v_enabled = !is_grounded
 	drag_margin_top = 0.75
+
+func check_player_presence():
+	if Player.position.y > limit_bottom + 20:
+		emit_signal("outside_camera")

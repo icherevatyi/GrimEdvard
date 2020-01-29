@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Edvard_animation_sheet.png-376627a367e18a9cc76575d15169f594.stex"
+path="res://.import/player_screen_parts.png-37f545eefea6c78af48881315f1e59da.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://src/assets/img/Player/Edvard_animation_sheet.png"
-dest_files=[ "res://.import/Edvard_animation_sheet.png-376627a367e18a9cc76575d15169f594.stex" ]
+source_file="res://src/assets/img/HUD/player_screen/player_screen_parts.png"
+dest_files=[ "res://.import/player_screen_parts.png-37f545eefea6c78af48881315f1e59da.stex" ]
 
 [params]
 

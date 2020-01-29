@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/InventoryGrid.png-37f669b0d41369ed305cb0903fda4694.stex"
+path="res://.import/chest.png-01f6625d787196901f9b9b24bdc79174.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://src/assets/img/HUD/Inventory/InventoryGrid.png"
-dest_files=[ "res://.import/InventoryGrid.png-37f669b0d41369ed305cb0903fda4694.stex" ]
+source_file="res://src/assets/img/GroundElements/chest.png"
+dest_files=[ "res://.import/chest.png-01f6625d787196901f9b9b24bdc79174.stex" ]
 
 [params]
 

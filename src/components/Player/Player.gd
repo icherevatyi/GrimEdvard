@@ -38,11 +38,6 @@ func set_camera_limits():
 	$Camera.limit_bottom = currentLevel.limits.bottom
 	$Camera.limit_left = currentLevel.limits.left
 	$Camera.limit_right = currentLevel.limits.right
-	
-func check_living_status():
-	if position.y > $Camera.limit_bottom + 20:
-		is_dead = true
-		Global.is_player_dead = true
 
 func check_if_grounded():
 	for notifier in is_grounded_notifiers.get_children():
@@ -58,18 +53,16 @@ func apply_gravity(delta):
 		set_collision_mask_bit(1, true)
 
 func check_weapon(delta):
-	match holsted:
-		false: 
-			$Weapons.visible = true
-			$Bare_hands.visible = false
-		true:
-			$Weapons.visible = false
-			$Bare_hands.visible = true
-			
+	var vas_holsted = holsted
+	if holsted == false:
+		$Weapons.visible = true
+	else:
+		$Weapons.visible = false
+
 	if is_climbing == true:
 		holsted = true
 	else:
-		holsted = false
+		holsted = vas_holsted
 
 func apply_movement():
 	movement = move_and_slide(movement, UP, true)
@@ -88,6 +81,9 @@ func apply_movement():
 		is_climbing = false
 
 func _input(event):
+	if event.is_action_pressed("ui_weapon_hide"):
+		holsted = not holsted
+	
 	if event.is_action_pressed("ui_attack"):
 		holsted = false
 		if attack_combo_counter == 0:
@@ -119,3 +115,7 @@ func handle_move_input():
 			movement.y = 0
 		vertical_direction = - int(Input.is_action_pressed("ui_up")) + int(Input.is_action_pressed("ui_down"))
 		movement.y =  move_speed * vertical_direction
+
+func _on_PlayerStats_player_died():
+	is_dead = true
+	Global.is_player_dead = true

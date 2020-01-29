@@ -1,23 +1,25 @@
-[gd_scene load_steps=19 format=2]
+[gd_scene load_steps=23 format=2]
 
 [ext_resource path="res://src/components/Player/Player.gd" type="Script" id=1]
 [ext_resource path="res://src/components/Player/PlayerStateMachine.gd" type="Script" id=2]
-[ext_resource path="res://src/assets/img/Player/Edvard_animation_sheet_body.png" type="Texture" id=3]
-[ext_resource path="res://src/assets/img/Player/Edvard_animation_sheet_hands.png" type="Texture" id=4]
-[ext_resource path="res://src/components/Player/Helpers/HUD.tscn" type="PackedScene" id=5]
-[ext_resource path="res://src/components/Player/Helpers/Camera.tscn" type="PackedScene" id=6]
+[ext_resource path="res://src/components/Player/PlayerStats.gd" type="Script" id=3]
+[ext_resource path="res://src/assets/img/Player/Edvard_animation_sheet_body.png" type="Texture" id=4]
+[ext_resource path="res://src/assets/img/Player/Edvard_animation_sheet_hands.png" type="Texture" id=5]
+[ext_resource path="res://src/assets/img/Player/Edvard_animation_sheet_1h_sword.png" type="Texture" id=6]
+[ext_resource path="res://src/components/Player/Helpers/HUD.tscn" type="PackedScene" id=7]
+[ext_resource path="res://src/components/Player/Helpers/Camera.tscn" type="PackedScene" id=8]
 
 [sub_resource type="AtlasTexture" id=1]
-atlas = ExtResource( 3 )
-region = Rect2( 0, 0, 2296, 23 )
+atlas = ExtResource( 4 )
+region = Rect2( 0, 0, 224, 299 )
 
 [sub_resource type="AtlasTexture" id=2]
-atlas = ExtResource( 4 )
-region = Rect2( 0, 0, 2296, 23 )
+atlas = ExtResource( 5 )
+region = Rect2( 0, 0, 224, 299 )
 
 [sub_resource type="AtlasTexture" id=3]
-atlas = ExtResource( 4 )
-region = Rect2( 0, 23, 2296, 23 )
+atlas = ExtResource( 6 )
+region = Rect2( 0, 0, 224, 299 )
 
 [sub_resource type="RectangleShape2D" id=4]
 extents = Vector2( 6, 11 )
@@ -50,6 +52,18 @@ tracks/1/keys = {
 "update": 1,
 "values": [ 17, 18, 19, 20, 21, 22, 23, 24, 0 ]
 }
+tracks/2/type = "value"
+tracks/2/path = NodePath("Bare_hands:frame")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.45, 0.5, 0.55, 0.6 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 17, 18, 19, 20, 21, 22, 23, 24, 0 ]
+}
 
 [sub_resource type="Animation" id=6]
 resource_name = "attack_2"
@@ -77,7 +91,19 @@ tracks/1/keys = {
 "times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.45, 0.5, 0.55, 0.6 ),
 "transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
 "update": 1,
-"values": [ 32, 33, 34, 35, 36, 37, 38, 39, 40 ]
+"values": [ 32, 33, 34, 35, 36, 37, 38, 39, 31 ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Bare_hands:frame")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.45, 0.5, 0.55, 0.6 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 32, 33, 34, 35, 36, 37, 38, 39, 31 ]
 }
 
 [sub_resource type="Animation" id=7]
@@ -103,6 +129,18 @@ tracks/1/loop_wrap = true
 tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.35, 0.4, 0.45 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 25, 26, 27, 28, 29, 30, 31 ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Bare_hands:frame")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
 "times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.35, 0.4, 0.45 ),
 "transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1 ),
 "update": 1,
@@ -139,7 +177,9 @@ tracks/1/keys = {
 }
 
 [sub_resource type="Animation" id=9]
-loop = true
+resource_name = "death"
+length = 0.5
+step = 0.05
 tracks/0/type = "value"
 tracks/0/path = NodePath("Body:frame")
 tracks/0/interp = 1
@@ -147,10 +187,10 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
+"times": PoolRealArray( 0, 0.05, 0.1, 0.15, 0.2, 0.25, 0.3, 0.35, 0.4 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
 "update": 1,
-"values": [ 12 ]
+"values": [ 40, 41, 42, 43, 44, 45, 46, 47, 48 ]
 }
 tracks/1/type = "value"
 tracks/1/path = NodePath("Bare_hands:frame")
@@ -159,25 +199,66 @@ tracks/1/loop_wrap = true
 tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
+"times": PoolRealArray( 0, 0.05, 0.1, 0.15, 0.2, 0.25, 0.3, 0.35, 0.4 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
 "update": 1,
-"values": [ 12 ]
+"values": [ 40, 41, 42, 43, 44, 45, 46, 47, 48 ]
 }
-tracks/2/type = "value"
-tracks/2/path = NodePath("Weapons/1h_sword_straight:frame")
+tracks/2/type = "method"
+tracks/2/path = NodePath("PlayerStats")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/imported = false
 tracks/2/enabled = true
 tracks/2/keys = {
-"times": PoolRealArray( 0 ),
+"times": PoolRealArray( 0.5 ),
 "transitions": PoolRealArray( 1 ),
-"update": 1,
-"values": [ 12 ]
+"values": [ {
+"args": [  ],
+"method": "show_deathscreen"
+} ]
 }
 
 [sub_resource type="Animation" id=10]
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Body:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 12 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Bare_hands:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 12 ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Weapons/1h_sword_straight:frame")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 12 ]
+}
+
+[sub_resource type="Animation" id=11]
 tracks/0/type = "value"
 tracks/0/path = NodePath("Body:frame")
 tracks/0/interp = 1
@@ -215,7 +296,7 @@ tracks/2/keys = {
 "values": [ 0 ]
 }
 
-[sub_resource type="Animation" id=11]
+[sub_resource type="Animation" id=12]
 loop = true
 tracks/0/type = "value"
 tracks/0/path = NodePath("Body:frame")
@@ -254,7 +335,7 @@ tracks/2/keys = {
 "values": [ 11 ]
 }
 
-[sub_resource type="Animation" id=12]
+[sub_resource type="Animation" id=13]
 length = 0.4
 loop = true
 step = 0.04
@@ -295,6 +376,47 @@ tracks/2/keys = {
 "values": [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 ]
 }
 
+[sub_resource type="Animation" id=14]
+resource_name = "take_damage"
+length = 0.16
+step = 0.05
+tracks/0/type = "value"
+tracks/0/path = NodePath("Body:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.05, 0.1 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ 49, 50, 51 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Bare_hands:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.05, 0.1 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ 49, 50, 51 ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("PlayerStats:damage_received")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0.15 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+
 [node name="Player" type="KinematicBody2D"]
 scale = Vector2( 1.00508, 1.00473 )
 collision_mask = 15
@@ -306,30 +428,34 @@ __meta__ = {
 [node name="PlayerStateMachine" type="Node2D" parent="."]
 script = ExtResource( 2 )
 
+[node name="PlayerStats" type="Node2D" parent="."]
+script = ExtResource( 3 )
+
 [node name="Body" type="Sprite" parent="." groups=[
 "turnable",
 ]]
 texture = SubResource( 1 )
-hframes = 41
-frame = 23
+vframes = 13
+hframes = 4
+frame = 48
 
 [node name="Bare_hands" type="Sprite" parent="." groups=[
 "turnable",
 ]]
-visible = false
 texture = SubResource( 2 )
-hframes = 41
+vframes = 13
+hframes = 4
+frame = 48
 
 [node name="Weapons" type="Node2D" parent="." groups=[
 "turnable",
 ]]
-scale = Vector2( 1, 1 )
 
 [node name="1h_sword_straight" type="Sprite" parent="Weapons"]
-scale = Vector2( 1, 1 )
 texture = SubResource( 3 )
-hframes = 41
-frame = 23
+vframes = 13
+hframes = 4
+frame = 29
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource( 4 )
@@ -339,14 +465,16 @@ anims/attack_1 = SubResource( 5 )
 anims/attack_2 = SubResource( 6 )
 anims/attack_3 = SubResource( 7 )
 anims/climb = SubResource( 8 )
-anims/fall = SubResource( 9 )
-anims/idle = SubResource( 10 )
-anims/jump = SubResource( 11 )
-anims/run = SubResource( 12 )
+anims/death = SubResource( 9 )
+anims/fall = SubResource( 10 )
+anims/idle = SubResource( 11 )
+anims/jump = SubResource( 12 )
+anims/run = SubResource( 13 )
+anims/take_damage = SubResource( 14 )
 
-[node name="HUD" parent="." instance=ExtResource( 5 )]
+[node name="HUD" parent="." instance=ExtResource( 7 )]
 
-[node name="Camera" parent="." instance=ExtResource( 6 )]
+[node name="Camera" parent="." instance=ExtResource( 8 )]
 position = Vector2( 0, -30 )
 zoom = Vector2( 0.5, 0.5 )
 editor_draw_screen = false
@@ -359,6 +487,7 @@ collide_with_areas = true
 collide_with_bodies = false
 
 [node name="Grounded_notifiers" type="Node2D" parent="."]
+editor/display_folded = true
 position = Vector2( 0, 10.9482 )
 
 [node name="RayCast2D" type="RayCast2D" parent="Grounded_notifiers"]
@@ -381,3 +510,10 @@ cast_to = Vector2( 0, 4 )
 collision_mask = 2
 collide_with_areas = true
 [connection signal="grounded_updated" from="." to="Camera" method="_on_Player_grounded_updated"]
+[connection signal="initialize_HP" from="PlayerStats" to="HUD" method="_on_initialize_HP"]
+[connection signal="initialize_Stamina" from="PlayerStats" to="HUD" method="_on_initialize_Stamina"]
+[connection signal="on_health_change" from="PlayerStats" to="HUD" method="_on_health_change"]
+[connection signal="player_died" from="PlayerStats" to="." method="_on_PlayerStats_player_died"]
+[connection signal="outside_camera" from="Camera" to="PlayerStats" method="_on_outside_camera"]
+
+[editable path="HUD"]
