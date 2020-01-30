@@ -75,7 +75,6 @@ region = Rect2( 0, 122, 217, 29 )
 script = ExtResource( 1 )
 
 [node name="BackgroundSkybox" type="CanvasLayer" parent="."]
-editor/display_folded = true
 layer = -3
 
 [node name="BackgroundGradient" type="Sprite" parent="BackgroundSkybox"]
@@ -88,7 +87,6 @@ texture = SubResource( 2 )
 centered = false
 
 [node name="Background" type="Node2D" parent="."]
-editor/display_folded = true
 
 [node name="BackgeoundWalls" type="TileMap" parent="Background"]
 z_index = -2
@@ -110,10 +108,8 @@ texture = ExtResource( 3 )
 centered = false
 
 [node name="FloatingIslands" type="Node2D" parent="."]
-editor/display_folded = true
 
 [node name="Island1" type="StaticBody2D" parent="FloatingIslands"]
-editor/display_folded = true
 position = Vector2( 1095, -107 )
 collision_layer = 2
 collision_mask = 0
@@ -130,7 +126,6 @@ rotation = 1.5708
 shape = SubResource( 4 )
 
 [node name="Island7" type="StaticBody2D" parent="FloatingIslands"]
-editor/display_folded = true
 position = Vector2( 2739, -84.4 )
 collision_layer = 2
 collision_mask = 0
@@ -147,7 +142,6 @@ rotation = 1.5708
 shape = SubResource( 4 )
 
 [node name="Island2" type="StaticBody2D" parent="FloatingIslands"]
-editor/display_folded = true
 position = Vector2( 2086.06, -61.1794 )
 collision_layer = 2
 collision_mask = 0
@@ -164,7 +158,6 @@ rotation = 1.5708
 shape = SubResource( 4 )
 
 [node name="Island3" type="StaticBody2D" parent="FloatingIslands"]
-editor/display_folded = true
 position = Vector2( 2376.08, -110.856 )
 collision_layer = 2
 collision_mask = 0
@@ -181,7 +174,6 @@ rotation = 1.5708
 shape = SubResource( 6 )
 
 [node name="Island5" type="StaticBody2D" parent="FloatingIslands"]
-editor/display_folded = true
 position = Vector2( 2556.74, -113.05 )
 collision_layer = 2
 collision_mask = 0
@@ -198,7 +190,6 @@ rotation = 1.5708
 shape = SubResource( 6 )
 
 [node name="Island4" type="StaticBody2D" parent="FloatingIslands"]
-editor/display_folded = true
 position = Vector2( 966, 23 )
 collision_layer = 2
 collision_mask = 0
@@ -215,7 +206,6 @@ rotation = 1.5708
 shape = SubResource( 8 )
 
 [node name="Island6" type="StaticBody2D" parent="FloatingIslands"]
-editor/display_folded = true
 position = Vector2( 3072, -80 )
 collision_layer = 2
 collision_mask = 0
@@ -232,7 +222,6 @@ rotation = 1.5708
 shape = SubResource( 8 )
 
 [node name="Island8" type="StaticBody2D" parent="FloatingIslands"]
-editor/display_folded = true
 position = Vector2( 2224, -166 )
 collision_layer = 2
 collision_mask = 0
@@ -260,13 +249,11 @@ __meta__ = {
 }
 
 [node name="Ladders" type="Node2D" parent="."]
-editor/display_folded = true
 position = Vector2( 0, -24 )
 
 [node name="Ladder1" parent="Ladders" groups=[
 "climable",
 ] instance=ExtResource( 6 )]
-editor/display_folded = true
 position = Vector2( 915, 19 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Ladders/Ladder1/Trigger" index="0"]
@@ -374,7 +361,6 @@ region_enabled = true
 region_rect = Rect2( 0, 0, 24, 105 )
 
 [node name="HangingBridge" type="StaticBody2D" parent="."]
-editor/display_folded = true
 position = Vector2( 1264, -128 )
 collision_layer = 2
 collision_mask = 5
@@ -389,7 +375,6 @@ texture = SubResource( 17 )
 polygon = PoolVector2Array( -127.96, 0.751587, -66.9623, 0.961884, -20.6527, 6.37706, -1.38123, 7.60515, 19.0239, 6.28259, 75.0432, 1.0639, 117.89, 1.00112, 96.0618, -2.9072, 70.9486, -3.03195, 47.634, -0.529816, 18.6257, 2.77881, -2.17578, 2.98045, -16.158, 2.29839, -47.3622, -0.85614, -74.0338, -3.03198, -100.02, -2.90726 )
 
 [node name="HangingBridge2" type="StaticBody2D" parent="."]
-editor/display_folded = true
 position = Vector2( 2907.74, -103.672 )
 collision_layer = 2
 collision_mask = 5
@@ -404,7 +389,6 @@ texture = SubResource( 17 )
 polygon = PoolVector2Array( -127.96, 0.751587, -66.9623, 0.961884, -20.6527, 6.37706, -1.38123, 7.60515, 19.0239, 6.28259, 75.0432, 1.0639, 117.89, 1.00112, 96.0618, -2.9072, 70.9486, -3.03195, 47.634, -0.529816, 18.6257, 2.77881, -2.17578, 2.98045, -16.158, 2.29839, -47.3622, -0.85614, -74.0338, -3.03198, -100.02, -2.90726 )
 
 [node name="WaterArea" type="Node2D" parent="."]
-editor/display_folded = true
 position = Vector2( -221, 1 )
 __meta__ = {
 "_edit_group_": true
@@ -444,7 +428,6 @@ __meta__ = {
 }
 
 [node name="LvLTransition" type="Node2D" parent="."]
-editor/display_folded = true
 position = Vector2( 3488, -114 )
 __meta__ = {
 "_edit_group_": true
@@ -454,7 +437,6 @@ __meta__ = {
 position = Vector2( 0, 0 )
 
 [node name="PlayerContainer" type="Node2D" parent="."]
-editor/display_folded = true
 
 [node name="PlayerSpawn_StartLvl" type="Position2D" parent="PlayerContainer"]
 position = Vector2( 152, 149 )

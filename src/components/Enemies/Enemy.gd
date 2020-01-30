@@ -1,4 +1,5 @@
 extends KinematicBody2D
 
+
 func _ready():
-	pass
+	var enemy = Classes.Enemy.new()
