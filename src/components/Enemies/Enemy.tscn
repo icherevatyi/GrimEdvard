@@ -160,4 +160,11 @@ texture_progress = SubResource( 23 )
 
 [node name="MoveChangeTimer" type="Timer" parent="Timers"]
 wait_time = 2.0
+
+[node name="FloorChecker" type="RayCast2D" parent="."]
+position = Vector2( -15, 0 )
+enabled = true
+cast_to = Vector2( 0, 20 )
+collision_mask = 2
+collide_with_areas = true
 [connection signal="timeout" from="Timers/MoveChangeTimer" to="." method="_on_MoveChangeTimer_timeout"]

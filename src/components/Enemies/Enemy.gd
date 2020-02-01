@@ -1,5 +1,13 @@
 extends KinematicBody2D
 
+
+# timers
+onready var movement_change_timer = $Timers/MoveChangeTimer
+
+#rayCasts
+onready var floor_checker = $FloorChecker
+
+
 var state_machine : AnimationNodeStateMachinePlayback
 
 # health vars
@@ -9,7 +17,7 @@ var hp_max
 # movement vars
 var movement_dir
 var direction = {"left": -1, "right": 1, "stay": 0}
-var speed = 60
+var speed = 50
 var gravity = 20
 var velocity = Vector2(0, 0)
 
@@ -19,8 +27,6 @@ var damage_max
 var damage_value
 var attack_type  # MELEE, RANGED, MAGIC, BOSS values are available for different enemies
 
-# timers
-onready var movement_change_timer = $Timers/MoveChangeTimer
 
 
 func _ready():
@@ -46,10 +52,16 @@ func randomize_movechange_timer():
 	movement_change_timer.set_wait_time(rand_number)
 
 
+func _on_MoveChangeTimer_timeout():
+	randomize_movechange_timer()
+	choose_movement_dir()
+
+
 func choose_movement_dir():
 	var rand_number = randi() % 3 + 1
 	randomize()
-
+	
+	var prev_dir = 1
 	match rand_number:
 		1:
 			movement_dir = direction.stay
@@ -57,19 +69,19 @@ func choose_movement_dir():
 			movement_dir = direction.left
 		3:
 			movement_dir = direction.right
-			
 	change_facing()
 
+
 func change_facing():
-	for child in get_children():
-		if child.is_in_group("turnable"):
-			if movement_dir == 1 or movement_dir == -1:
+	if movement_dir != 0:
+		match movement_dir:
+			1:
+				floor_checker.position.x = 15
+			-1:
+				floor_checker.position.x = -15
+		for child in get_children():
+			if child.is_in_group("turnable"):
 				child.scale.x = movement_dir
-
-
-func _on_MoveChangeTimer_timeout():
-	randomize_movechange_timer()
-	choose_movement_dir()
 
 
 func apply_gravity():
@@ -86,10 +98,9 @@ func move():
 
 
 func check_obstickes():
-	if is_on_wall():
+	if is_on_wall() or floor_checker.is_colliding() == false:
 		movement_dir *= -1
 		change_facing()
-
 
 func chase():
 	pass
