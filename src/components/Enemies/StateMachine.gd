@@ -19,9 +19,9 @@ func _process(delta):
 	check_state()
 
 func check_state():
-	if parent.movement_dir == 0 and parent.velocity.x == 0 and parent.is_attacking == false:
+	if parent.movement_dir == 0 and parent.velocity.x == 0:
 		state_machine.travel("idle")
-	if parent.movement_dir != 0 and parent.velocity.x != 0 and parent.is_attacking == false:
+	if parent.movement_dir != 0 and parent.velocity.x != 0:
 		state_machine.travel("walk")
 	if parent.is_attacking == true:
 		state_machine.travel("attack")
