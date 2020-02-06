@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://src/components/Enemies/Enemy.tscn" type="PackedScene" id=1]
 [ext_resource path="res://src/assets/img/Enemies/PlagueDoc/plague_doctor_map.png" type="Texture" id=2]
@@ -13,6 +13,9 @@ atlas = ExtResource( 2 )
 region = Rect2( 0, 0, 192, 224 )
 
 [sub_resource type="AnimationNodeStateMachinePlayback" id=3]
+
+[sub_resource type="CapsuleShape2D" id=4]
+height = 8.0
 
 [node name="PlagueDoctor" instance=ExtResource( 1 )]
 script = ExtResource( 3 )
@@ -29,5 +32,17 @@ hframes = 4
 [node name="AnimationTree" parent="." index="3"]
 parameters/playback = SubResource( 3 )
 
+[node name="AggroRadius" parent="Detectors" index="0"]
+visible = false
+
 [node name="CollisionShape2D" parent="Detectors/AggroRadius" index="0"]
 position = Vector2( 80, 0 )
+
+[node name="AttackRange" parent="Detectors" index="1"]
+visible = false
+
+[node name="HitBox" type="Area2D" parent="Detectors" index="2"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Detectors/HitBox" index="0"]
+position = Vector2( 0, 2 )
+shape = SubResource( 4 )
