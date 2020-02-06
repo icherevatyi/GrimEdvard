@@ -447,7 +447,7 @@ position = Vector2( 3408, -48 )
 [node name="Enemies" type="Node2D" parent="."]
 
 [node name="PlagueDoctor" parent="Enemies" instance=ExtResource( 11 )]
-position = Vector2( 970, -16 )
+position = Vector2( 1060, 145 )
 [connection signal="body_entered" from="LvLTransition/To_next" to="." method="_on_To_next_body_entered"]
 
 [editable path="Ladders/Ladder1"]

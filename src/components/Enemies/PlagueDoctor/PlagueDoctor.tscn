@@ -17,16 +17,17 @@ region = Rect2( 0, 0, 192, 224 )
 [node name="PlagueDoctor" instance=ExtResource( 1 )]
 script = ExtResource( 3 )
 
-[node name="CollisionShape2D" parent="." index="0"]
+[node name="CollisionShape2D" parent="." index="1"]
 position = Vector2( 0, 3 )
 shape = SubResource( 1 )
 
-[node name="Sprite" parent="." index="1" groups=[
-"turnable",
-]]
+[node name="Sprite" parent="." index="2"]
 texture = SubResource( 2 )
 vframes = 7
 hframes = 4
 
-[node name="AnimationTree" parent="." index="2"]
+[node name="AnimationTree" parent="." index="3"]
 parameters/playback = SubResource( 3 )
+
+[node name="CollisionShape2D" parent="Detectors/AggroRadius" index="0"]
+position = Vector2( 80, 0 )
